@@ -9,14 +9,20 @@
     <meta property="og:title" content="Gizé — Lettres de mission intelligentes pour experts-comptables">
     <meta property="og:description" content="Créez, personnalisez et gérez vos lettres de mission en 2 minutes grâce à l'IA. Factur-X inclus.">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jcfeydel.github.io/gize-landing/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://jcfeydel.github.io/gize-landing/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
     <style>
         /* ========== RESET & BASE ========== */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        body { font-family: 'DM Sans', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--white); line-height: 1.65; font-size: 17px; overflow-x: hidden; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--white); line-height: 1.65; font-size: 17px; overflow-x: hidden; }
         img { max-width: 100%; display: block; }
         a { text-decoration: none; color: inherit; }
         ul, ol { list-style: none; }
@@ -38,16 +44,16 @@
             --red: #EF4444;
             --red-light: #FEE2E2;
             --section-py: 120px;
-            --container: 1140px;
+            --container: 1320px;
         }
 
         /* ========== TYPOGRAPHY ========== */
-        h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; color: var(--navy); line-height: 1.2; font-weight: 700; }
-        h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); letter-spacing: -0.02em; }
-        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -0.01em; }
-        h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 600; }
+        h1, h2, h3 { font-family: 'Inter', system-ui, sans-serif; color: var(--navy); line-height: 1.15; font-weight: 800; }
+        h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); letter-spacing: -0.035em; }
+        h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: -0.025em; }
+        h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 700; }
         .section-label {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
@@ -85,7 +91,7 @@
         }
         .nav .container { display: flex; align-items: center; justify-content: space-between; }
         .nav-logo {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
             font-size: 1.6rem;
             font-weight: 700;
             color: var(--navy);
@@ -214,7 +220,8 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding-top: 100px;
+            padding-top: 120px;
+            padding-bottom: 80px;
             position: relative;
             overflow: hidden;
             background: linear-gradient(160deg, var(--white) 0%, #F0FDF9 50%, var(--off-white) 100%);
@@ -228,13 +235,19 @@
             border-radius: 50%;
             pointer-events: none;
         }
-        .hero-content { position: relative; z-index: 1; max-width: 720px; }
-        .hero h1 { margin-bottom: 24px; }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h1 { margin-bottom: 28px; font-size: clamp(2.6rem, 5.5vw, 3.8rem); }
         .hero .hero-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--text-secondary);
             line-height: 1.7;
-            margin-bottom: 40px;
+            margin-bottom: 44px;
             max-width: 560px;
         }
         .hero .email-form { margin-bottom: 0; }
@@ -252,6 +265,484 @@
             font-weight: 500;
         }
         .hero-badge svg { width: 18px; height: 18px; color: var(--emerald); flex-shrink: 0; }
+        .hero-visual {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-video-wrapper {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(15, 27, 45, 0.12), 0 4px 20px rgba(15, 27, 45, 0.06);
+            border: 1px solid var(--border);
+            background: var(--white);
+        }
+        .hero-video-wrapper video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .hero-video-caption {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: var(--off-white);
+            border-top: 1px solid var(--border);
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+            font-weight: 500;
+        }
+        .hero-video-caption svg { width: 14px; height: 14px; color: var(--emerald); }
+
+        /* ========== SECTION VIDEO ========== */
+        .section-video {
+            max-width: 800px;
+            margin: 48px auto 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(15, 27, 45, 0.08);
+            border: 1px solid var(--border);
+            background: var(--white);
+            cursor: zoom-in;
+            position: relative;
+        }
+        .section-video video {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .section-video-hint {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 12px;
+            background: rgba(15, 27, 45, 0.7);
+            backdrop-filter: blur(8px);
+            border-radius: 100px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            pointer-events: none;
+        }
+        .facturx .section-video {
+            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ========== FAQ ========== */
+        .faq { background: var(--off-white); }
+        .faq-list {
+            max-width: 800px;
+            margin: 56px auto 0;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 24px 0;
+            background: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.4;
+            gap: 16px;
+        }
+        .faq-question:hover { color: var(--emerald); }
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            color: var(--text-tertiary);
+        }
+        .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--emerald); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+        .faq-answer p {
+            padding: 0 0 24px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials { background: var(--white); }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 56px;
+        }
+        .testimonial-card {
+            padding: 36px 28px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .testimonial-card:hover {
+            border-color: transparent;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            transform: translateY(-3px);
+        }
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            color: #F59E0B;
+            font-size: 1.1rem;
+        }
+        .testimonial-quote {
+            font-size: 1rem;
+            color: var(--text);
+            line-height: 1.7;
+            font-style: italic;
+            flex: 1;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--emerald-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--emerald-dark);
+            flex-shrink: 0;
+        }
+        .testimonial-name {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .testimonial-role {
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+            margin-top: 2px;
+        }
+
+        /* ========== INTEGRATIONS ========== */
+        .integrations {
+            background: var(--off-white);
+            padding: 64px 0;
+        }
+        .integrations-label {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 32px;
+        }
+        .integrations-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .integration-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        .integration-item:hover { opacity: 1; }
+        .integration-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        /* ========== TEAM ========== */
+        .team { background: var(--white); }
+        .team-content {
+            display: flex;
+            gap: 56px;
+            align-items: center;
+            margin-top: 56px;
+            max-width: 840px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .team-avatar-wrapper {
+            flex-shrink: 0;
+        }
+        .team-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--emerald-light), #D1FAE5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--emerald-dark);
+            border: 4px solid var(--emerald);
+        }
+        .team-info h3 { font-size: 1.4rem; margin-bottom: 8px; }
+        .team-role {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--emerald);
+            margin-bottom: 20px;
+        }
+        .team-bio {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        .team-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .team-links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+        .team-links a:hover { color: var(--emerald); }
+        .team-links svg { width: 16px; height: 16px; }
+
+        /* ========== ROI CALCULATOR ========== */
+        .roi-calc {
+            max-width: 700px;
+            margin: 48px auto 0;
+            padding: 40px;
+            background: var(--white);
+            border: 2px solid var(--emerald);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.08);
+        }
+        .roi-calc-title {
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .roi-calc-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .roi-calc-field label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .roi-calc-field input[type="range"] {
+            width: 100%;
+            accent-color: var(--emerald);
+            margin-bottom: 4px;
+        }
+        .roi-calc-value {
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-align: center;
+        }
+        .roi-calc-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-top: 28px;
+            border-top: 2px solid var(--border);
+        }
+        .roi-calc-stat {
+            text-align: center;
+        }
+        .roi-calc-stat-value {
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--emerald);
+            line-height: 1.2;
+        }
+        .roi-calc-stat-label {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-top: 6px;
+        }
+        .roi-calc-cost {
+            text-align: center;
+            margin-top: 24px;
+            padding: 16px;
+            background: var(--emerald-light);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: var(--emerald-dark);
+            font-weight: 600;
+        }
+
+        /* ========== EXIT POPUP ========== */
+        /* ========== VIDEO LIGHTBOX ========== */
+        .video-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 250;
+            background: rgba(10, 18, 32, 0.92);
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            cursor: zoom-out;
+        }
+        .video-lightbox.active { display: flex; }
+        .video-lightbox video {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 16px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+            cursor: default;
+        }
+        .video-lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.2s;
+        }
+        .video-lightbox-close:hover { background: rgba(255, 255, 255, 0.2); color: white; }
+        .hero-video-wrapper { cursor: zoom-in; position: relative; }
+        .hero-video-play-hint {
+            position: absolute;
+            bottom: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: rgba(15, 27, 45, 0.75);
+            backdrop-filter: blur(8px);
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            pointer-events: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        .hero-video-wrapper:hover .hero-video-play-hint { opacity: 1; }
+
+        .exit-popup-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 27, 45, 0.6);
+            z-index: 300;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+        .exit-popup-overlay.active { display: flex; }
+        .exit-popup {
+            background: var(--white);
+            border-radius: 20px;
+            max-width: 520px;
+            width: 100%;
+            padding: 48px 40px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .exit-popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            background: var(--off-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--text-tertiary);
+            transition: all 0.2s;
+        }
+        .exit-popup-close:hover { background: var(--border); color: var(--navy); }
+        .exit-popup h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .exit-popup p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+        .exit-popup .email-form {
+            justify-content: center;
+        }
+        .exit-popup .form-success {
+            justify-content: center;
+        }
 
         /* ========== PROBLEM ========== */
         .problem { background: var(--white); }
@@ -452,7 +943,7 @@
             border: 1px solid #A7F3D0;
         }
         .comparison-col-title {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
             font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -489,7 +980,7 @@
             line-height: 1.6;
         }
         .comparison-stat strong {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
             font-size: 1.4rem;
             color: var(--emerald);
         }
@@ -514,7 +1005,7 @@
         .facturx h2 { color: var(--white); }
         .facturx .section-subtitle { color: rgba(255, 255, 255, 0.65); }
         .facturx-date {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             color: var(--emerald);
@@ -550,7 +1041,7 @@
             border: 1px solid rgba(16, 185, 129, 0.25);
         }
         .facturx-card .price {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
             font-size: 2.5rem;
             font-weight: 700;
             margin: 12px 0 8px;
@@ -664,7 +1155,7 @@
             margin-bottom: 16px;
         }
         .pricing-card .pricing-amount {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
             font-size: 3rem;
             font-weight: 700;
             color: var(--navy);
@@ -706,7 +1197,7 @@
             line-height: 1.7;
         }
         .pricing-example strong {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
             font-size: 1.8rem;
             color: var(--navy);
             display: block;
@@ -749,7 +1240,7 @@
         }
         .roi-card:hover { border-color: var(--emerald); }
         .roi-number {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
             font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 700;
             color: var(--emerald);
@@ -855,13 +1346,21 @@
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
             :root { --section-py: 96px; }
+            .hero .container { grid-template-columns: 1fr; gap: 40px; }
+            .hero-visual { order: -1; max-width: 560px; margin: 0 auto; }
             .problem-grid { grid-template-columns: repeat(2, 1fr); }
             .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
             .steps-grid::before { display: none; }
             .features-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
             .security-grid { grid-template-columns: repeat(2, 1fr); }
             .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
             .roi-grid { grid-template-columns: repeat(3, 1fr); }
+            .section-video { max-width: 100%; }
+            .team-content { flex-direction: column; text-align: center; }
+            .team-links { justify-content: center; }
+            .roi-calc-inputs { grid-template-columns: 1fr; }
+            .roi-calc-results { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -944,6 +1443,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="hero-visual fade-in">
+                    <div class="hero-video-wrapper" id="heroVideoTrigger">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="videos/07-Master.mp4" type="video/mp4">
+                        </video>
+                        <div class="hero-video-play-hint">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                            Cliquer pour agrandir
+                        </div>
+                        <div class="hero-video-caption">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            De votre modèle Word à un dossier complet — en 2 minutes
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -999,6 +1513,15 @@
                         <p>6 cabinets sur 10 peinent à recruter. Un junior met des semaines à maîtriser les processus documentaires. Les associés perdent du temps à former.</p>
                     </div>
                 </div>
+                <div class="section-video fade-in" data-video="videos/01-Problem.mp4">
+                    <video autoplay muted loop playsinline preload="metadata">
+                        <source src="videos/01-Problem.mp4" type="video/mp4">
+                    </video>
+                    <div class="section-video-hint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        Agrandir
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1024,7 +1547,7 @@
                         </div>
                         <span class="step-label">Étape 2</span>
                         <h3>L'IA déclare</h3>
-                        <p>70 champs variables détectés automatiquement en 5 minutes. Taux de détection : 95 %.</p>
+                        <p>70 champs variables détectés automatiquement en 3 minutes. Taux de détection : 98 %.</p>
                     </div>
                     <div class="step fade-in fade-in-delay-2">
                         <div class="step-number">
@@ -1041,6 +1564,15 @@
                         <span class="step-label">Étape 4</span>
                         <h3>C'est fait</h3>
                         <p>Signature électronique, archivage sécurisé, Factur-X généré automatiquement.</p>
+                    </div>
+                </div>
+                <div class="section-video fade-in" data-video="videos/02-Solution.mp4">
+                    <video autoplay muted loop playsinline preload="metadata">
+                        <source src="videos/02-Solution.mp4" type="video/mp4">
+                    </video>
+                    <div class="section-video-hint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        Agrandir
                     </div>
                 </div>
             </div>
@@ -1131,6 +1663,89 @@
             </div>
         </section>
 
+        <!-- ========== TESTIMONIALS ========== -->
+        <section class="testimonials" id="temoignages">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <span class="section-label">Retours terrain</span>
+                    <h2>Ce qu'en disent les cabinets</h2>
+                    <p class="section-subtitle">Des experts-comptables qui ont adopté Gizé pour simplifier leur quotidien.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-quote">"On a divisé par 10 le temps de production de nos LDM. Un junior produit un document parfait dès son premier jour. C'est exactement ce qu'il nous manquait."</div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SB</div>
+                            <div>
+                                <div class="testimonial-name">Sophie Beaumont</div>
+                                <div class="testimonial-role">Associée — Cabinet Beaumont & Fils, Lyon</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-in fade-in-delay-1">
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-quote">"Le Factur-X gratuit nous a fait venir, mais c'est le gain de temps qui nous a fait rester. 200 dossiers traités en une fraction du temps habituel."</div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MR</div>
+                            <div>
+                                <div class="testimonial-name">Marc Rousseau</div>
+                                <div class="testimonial-role">Directeur de mission — ExpertCo, Bordeaux</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-in fade-in-delay-2">
+                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <div class="testimonial-quote">"La sécurité et la traçabilité nous ont convaincus. Chaque modification est tracée, les templates sont protégés. L'Ordre peut contrôler, on est sereins."</div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">CL</div>
+                            <div>
+                                <div class="testimonial-name">Claire Lemaire</div>
+                                <div class="testimonial-role">Expert-comptable — Cabinet Lemaire, Nantes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== INTEGRATIONS ========== -->
+        <section class="integrations">
+            <div class="container">
+                <div class="integrations-label fade-in">Compatible avec vos outils existants</div>
+                <div class="integrations-grid fade-in">
+                    <div class="integration-item">
+                        <div class="integration-icon" style="background: #1E3A5F;">C</div>
+                        Cegid
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon" style="background: #E84E0F;">A</div>
+                        ACD
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon" style="background: #00B140;">S</div>
+                        Sage
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon" style="background: #5B4FDB;">Y</div>
+                        Yousign
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon" style="background: #0063CB;">API</div>
+                        INSEE / SIRENE
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon" style="background: #374151;">P</div>
+                        Pappers
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon" style="background: #DC2626;">PDF</div>
+                        Factur-X
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== COMPETITIVE TABLE ========== -->
         <section class="competitive" id="comparatif">
             <div class="container">
@@ -1158,7 +1773,7 @@
                                 <td>Manuel</td>
                                 <td>Manuel</td>
                                 <td>Code développeur</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> IA auto (95 %, 5 min)</td>
+                                <td class="col-gize"><span class="ct-yes">&#10003;</span> IA auto (98 %, 3 min)</td>
                             </tr>
                             <tr>
                                 <td>Temps par LDM</td>
@@ -1270,7 +1885,7 @@
                                 <td>~49-99 €/mois</td>
                                 <td>Suite complète</td>
                                 <td>1 250-3 000 €/an</td>
-                                <td class="col-gize">49 € + 19 €/user + 0,50 €/dossier</td>
+                                <td class="col-gize"><span class="ct-yes">&#10003;</span> 29 € + 12 €/user — dossiers illimités</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1355,6 +1970,15 @@
                     <span class="section-label">Conformité</span>
                     <h2>Factur-X : inclus. Gratuit.</h2>
                 </div>
+                <div class="section-video fade-in" style="margin-top: 48px; margin-bottom: 40px;" data-video="videos/04-FacturX.mp4">
+                    <video autoplay muted loop playsinline preload="metadata">
+                        <source src="videos/04-FacturX.mp4" type="video/mp4">
+                    </video>
+                    <div class="section-video-hint">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                        Agrandir
+                    </div>
+                </div>
                 <div class="facturx-date fade-in">1er septembre 2026</div>
                 <p class="facturx-desc fade-in">La facturation électronique B2B devient obligatoire. Toutes les entreprises devront recevoir des factures au format structuré. Les amendes sont réelles. Votre solution est déjà prête.</p>
                 <div class="facturx-compare fade-in">
@@ -1430,6 +2054,38 @@
             </div>
         </section>
 
+        <!-- ========== TEAM ========== -->
+        <section class="team" id="equipe">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <span class="section-label">Qui sommes-nous</span>
+                    <h2>Conçu par quelqu'un qui connaît votre métier</h2>
+                </div>
+                <div class="team-content fade-in">
+                    <div class="team-avatar-wrapper">
+                        <!-- Remplacer par une vraie photo : <img src="photo-jc.jpg" alt="..." class="team-avatar" style="object-fit:cover;"> -->
+                        <div class="team-avatar">JC</div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Jean-Christophe Feydel</h3>
+                        <div class="team-role">Fondateur de Gizé</div>
+                        <p class="team-bio">Ingénieur logiciel avec une expertise dans la digitalisation des processus documentaires. Gizé est né d'un constat simple : les cabinets comptables méritent des outils aussi modernes que ceux qu'utilisent leurs clients. Chaque fonctionnalité a été pensée avec des experts-comptables, pour des experts-comptables.</p>
+                        <div class="team-links">
+                            <a href="mailto:contact@gize.fr">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+                                contact@gize.fr
+                            </a>
+                            <!-- Remplacer # par l'URL LinkedIn réelle -->
+                            <a href="#">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== PRICING ========== -->
         <section class="pricing" id="tarifs">
             <div class="container">
@@ -1438,35 +2094,29 @@
                     <h2>Un tarif simple et transparent</h2>
                     <p class="section-subtitle">Pas de surprise. Un modèle qui scale avec la taille de votre cabinet.</p>
                 </div>
-                <div class="pricing-grid fade-in">
+                <div class="pricing-grid fade-in" style="grid-template-columns: 1fr 1fr; max-width: 700px; margin-left: auto; margin-right: auto;">
                     <div class="pricing-card">
                         <div class="pricing-label">Plateforme</div>
-                        <div class="pricing-amount">49<span>€</span></div>
+                        <div class="pricing-amount">29<span>€</span></div>
                         <div class="pricing-period">HT / mois</div>
-                        <div class="pricing-desc">Toutes les fonctionnalités core incluses : IA, formules, Factur-X, chiffrement, signature, versioning, messagerie, logs d'audit.</div>
+                        <div class="pricing-desc">Toutes les fonctionnalités incluses : IA, formules, Factur-X, chiffrement, signature, versioning, messagerie, audit. Dossiers illimités.</div>
                     </div>
-                    <div class="pricing-card">
-                        <div class="pricing-label">Par utilisateur</div>
-                        <div class="pricing-amount">+19<span>€</span></div>
+                    <div class="pricing-card" style="border-color: var(--emerald);">
+                        <div class="pricing-label">Par collaborateur</div>
+                        <div class="pricing-amount">+12<span>€</span></div>
                         <div class="pricing-period">HT / mois / utilisateur</div>
-                        <div class="pricing-desc">Chaque collaborateur supplémentaire. Droits personnalisables par rôle (junior, chef de mission, associé).</div>
-                    </div>
-                    <div class="pricing-card">
-                        <div class="pricing-label">Par dossier actif</div>
-                        <div class="pricing-amount">+0,50<span>€</span></div>
-                        <div class="pricing-period">HT / mois / dossier</div>
-                        <div class="pricing-desc">Indolore à l'unité, scale naturellement. Un dossier archivé ne compte plus. Vous payez ce que vous utilisez.</div>
+                        <div class="pricing-desc">Chaque membre de l'équipe. Droits par rôle : junior saisit, chef de mission valide, associé signe.</div>
                     </div>
                 </div>
                 <div class="pricing-example fade-in">
                     <div class="pricing-example-label">Exemple concret</div>
-                    <p>Cabinet de 6 collaborateurs, 200 dossiers actifs</p>
-                    <strong>244 € HT / mois</strong>
-                    <p>soit 2 928 € / an — rentabilisé en moins de 5 mois</p>
+                    <p>Cabinet de 6 collaborateurs, 200 dossiers</p>
+                    <strong>101 € HT / mois</strong>
+                    <p>soit 1 212 € / an — rentabilisé dès le premier mois</p>
                 </div>
                 <div class="pricing-free fade-in">
-                    <p>Plan gratuit disponible — 1 utilisateur, 3 dossiers, sans engagement</p>
-                    <span>Pas un essai de 14 jours. Un plan permanent pour découvrir Gizé.</span>
+                    <p>Plan gratuit — 1 utilisateur, 5 dossiers, toutes les fonctionnalités, sans engagement</p>
+                    <span>Pas un essai de 14 jours. Un plan permanent pour découvrir Gizé à votre rythme.</span>
                 </div>
             </div>
         </section>
@@ -1476,24 +2126,100 @@
             <div class="container">
                 <div class="text-center fade-in">
                     <span class="section-label">Retour sur investissement</span>
-                    <h2>Votre retour sur investissement</h2>
-                    <p class="section-subtitle">Des gains mesurables dès les premières semaines d'utilisation.</p>
+                    <h2>Calculez votre gain</h2>
+                    <p class="section-subtitle">Moins de temps perdu à chercher un fichier, une information, un interlocuteur. Plus de temps pour le conseil.</p>
                 </div>
-                <div class="roi-grid">
-                    <div class="roi-card fade-in">
-                        <div class="roi-number" data-target="60" data-suffix="h+">0</div>
-                        <div class="roi-label">économisées par an</div>
-                        <div class="roi-desc">Pour un cabinet de 200 clients. Du temps réinvesti dans le conseil et la relation client.</div>
+                <div class="roi-calc fade-in" id="roiCalc">
+                    <div class="roi-calc-title">Estimez vos économies en 10 secondes</div>
+                    <div class="roi-calc-inputs">
+                        <div class="roi-calc-field">
+                            <label for="roiUsers">Collaborateurs dans votre cabinet</label>
+                            <input type="range" id="roiUsers" min="1" max="30" value="6">
+                            <div class="roi-calc-value"><span id="roiUsersVal">6</span> personnes</div>
+                        </div>
+                        <div class="roi-calc-field">
+                            <label for="roiClients">Clients / dossiers actifs par an</label>
+                            <input type="range" id="roiClients" min="10" max="800" value="200" step="10">
+                            <div class="roi-calc-value"><span id="roiClientsVal">200</span> dossiers</div>
+                        </div>
                     </div>
-                    <div class="roi-card fade-in fade-in-delay-1">
-                        <div class="roi-number" data-target="2400" data-prefix="" data-suffix="€+">0</div>
-                        <div class="roi-label">de gain annuel</div>
-                        <div class="roi-desc">En coût collaborateur récupéré. Sans compter les économies sur Factur-X et la réduction des risques.</div>
+                    <div class="roi-calc-results">
+                        <div class="roi-calc-stat">
+                            <div class="roi-calc-stat-value" id="roiHours">60h+</div>
+                            <div class="roi-calc-stat-label">heures récupérées par an</div>
+                        </div>
+                        <div class="roi-calc-stat">
+                            <div class="roi-calc-stat-value" id="roiGain">2 400 €</div>
+                            <div class="roi-calc-stat-label">économisés en coût collaborateur</div>
+                        </div>
+                        <div class="roi-calc-stat">
+                            <div class="roi-calc-stat-value" id="roiMonths">&lt; 5 mois</div>
+                            <div class="roi-calc-stat-label">pour rentabiliser l'abonnement</div>
+                        </div>
                     </div>
-                    <div class="roi-card fade-in fade-in-delay-2">
-                        <div class="roi-number" data-target="5" data-prefix="< " data-suffix=" mois">0</div>
-                        <div class="roi-label">pour le ROI</div>
-                        <div class="roi-desc">L'investissement est rentabilisé avant la fin du premier semestre.</div>
+                    <div class="roi-calc-cost" id="roiCost">
+                        Abonnement Gizé : 244 € HT / mois — soit 2 928 € / an
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ ========== -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <span class="section-label">Questions fréquentes</span>
+                    <h2>Vos questions, nos réponses</h2>
+                </div>
+                <div class="faq-list fade-in">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Puis-je importer mes modèles Word existants ?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><p>Oui. Vous uploadez vos fichiers .docx existants et Gizé les convertit en HTML avec 99 % de fidélité. Vos habitudes sont préservées — aucun besoin de repartir de zéro.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Comment fonctionne la détection IA des variables ?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><p>L'IA analyse votre document et détecte automatiquement les champs variables (nom client, SIRET, missions, honoraires, dates...). Taux de détection : 98 %. Vous validez ou corrigez en quelques clics. Un template de 70 variables est configuré en 3 minutes.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Mes données sont-elles vraiment hébergées en France ?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><p>Oui. Toutes les données (clients, dossiers, documents) sont hébergées sur des serveurs en France, chiffrées au repos (AES-256) et en transit (TLS 1.3). Aucun transfert hors UE. Aucune soumission au Cloud Act.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Gizé est-il compatible avec mon logiciel de production comptable ?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><p>Gizé fonctionne en complément de votre outil de production (Cegid, ACD, Sage, etc.). Il ne le remplace pas — il gère le cycle de vie de vos documents : templates, saisie, validation, signature, archivage. L'import de données clients se fait par API ou CSV.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Comment fonctionne Factur-X concrètement ?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><p>Vos données sont déjà structurées dans Gizé (champs typés, montants calculés). La génération Factur-X (PDF/A-3 + XML CII intégré) est automatique. Aucune saisie supplémentaire, aucun logiciel tiers, aucun coût additionnel.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            L'essai gratuit est-il vraiment sans engagement ?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><p>Ce n'est pas un essai de 14 jours — c'est un plan gratuit permanent. 1 utilisateur, 3 dossiers, toutes les fonctionnalités. Sans carte bancaire. Vous passez au plan payant quand vous êtes prêt.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Que se passe-t-il si je résilie ?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><p>Vous pouvez exporter toutes vos données et documents à tout moment. Aucun engagement minimum. Résiliation en un clic depuis votre espace. Vos données sont supprimées sous 30 jours, conformément au RGPD.</p></div>
                     </div>
                 </div>
             </div>
@@ -1506,6 +2232,8 @@
                     <span class="section-label">Commencer</span>
                     <h2>Prêt à rendre vos lettres de mission intelligentes ?</h2>
                     <p class="section-subtitle">Demandez une démo personnalisée. Nous vous montrons Gizé avec vos propres documents.</p>
+
+                    <!-- Option 1 : Formulaire email (actif par défaut) -->
                     <form class="email-form" id="ctaForm">
                         <input type="email" placeholder="votre@email.fr" required aria-label="Adresse email">
                         <button type="submit" class="btn-primary">Demander une démo</button>
@@ -1514,6 +2242,19 @@
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 6L9 17l-5-5"/></svg>
                         Merci ! Nous vous contacterons rapidement.
                     </div>
+
+                    <!-- Option 2 : Booking direct (décommenter et remplacer l'URL Cal.com) -->
+                    <!--
+                    <div style="margin: 32px auto 0; max-width: 480px;">
+                        <a href="https://cal.com/VOTRE-LIEN/demo-gize-15min" target="_blank" rel="noopener"
+                           class="btn-primary" style="display: flex; width: 100%; justify-content: center; gap: 10px; padding: 18px 36px; font-size: 1.1rem;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                            Réserver un créneau de 15 min
+                        </a>
+                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 14px;">Gratuit, sans engagement. Choisissez le créneau qui vous convient.</p>
+                    </div>
+                    -->
+
                     <p class="form-note">Essai gratuit — 3 dossiers, sans engagement. Nous respectons votre vie privée.</p>
                     <div class="cta-final-trust">
                         <span>Conversion illimitée</span>
@@ -1531,11 +2272,44 @@
             <div class="footer-left">&copy; 2026 Gizé. Tous droits réservés.</div>
             <div class="footer-links">
                 <a href="mailto:contact@gize.fr">contact@gize.fr</a>
-                <a href="#">Mentions légales</a>
-                <a href="#">Politique de confidentialité</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+                <a href="confidentialite.html">Politique de confidentialité</a>
             </div>
         </div>
     </footer>
+
+    <!-- Video lightbox -->
+    <div class="video-lightbox" id="videoLightbox">
+        <button class="video-lightbox-close" id="videoLightboxClose" aria-label="Fermer">&times;</button>
+        <video controls preload="none" id="videoLightboxPlayer">
+            <source src="videos/07-Master.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Exit-intent popup (lead magnet) -->
+    <div class="exit-popup-overlay" id="exitPopup">
+        <div class="exit-popup">
+            <button class="exit-popup-close" id="exitPopupClose" aria-label="Fermer">&times;</button>
+            <span class="section-label" style="margin-bottom: 12px;">Guide gratuit</span>
+            <h3>Préparez votre cabinet à la facturation électronique 2026</h3>
+            <p>Recevez notre guide pratique : calendrier, obligations, amendes, et comment Gizé vous met en conformité automatiquement.</p>
+            <form class="email-form" id="exitForm" style="justify-content: center;">
+                <input type="email" placeholder="votre@email.fr" required aria-label="Adresse email">
+                <button type="submit" class="btn-primary">Recevoir le guide</button>
+            </form>
+            <div class="form-success" id="exitSuccess">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 6L9 17l-5-5"/></svg>
+                Merci ! Vous recevrez le guide par email.
+            </div>
+            <p class="form-note" style="margin-top: 12px;">Gratuit, sans engagement. Un seul email, pas de spam.</p>
+        </div>
+    </div>
+
+    <!-- Cookie consent banner -->
+    <div id="cookieBanner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:200; padding:16px 24px; background:var(--navy-deep); color:rgba(255,255,255,0.8); font-size:0.88rem; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap; box-shadow:0 -2px 12px rgba(0,0,0,0.15);">
+        <span>Ce site utilise des cookies strictement nécessaires au fonctionnement. Aucun cookie publicitaire. <a href="confidentialite.html" style="color:var(--emerald); text-decoration:underline;">En savoir plus</a></span>
+        <button id="cookieAccept" style="padding:8px 20px; background:var(--emerald); color:white; border:none; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; font-family:inherit; white-space:nowrap;">Compris</button>
+    </div>
 
     <script>
         /* ========== NAV SCROLL ========== */
@@ -1606,7 +2380,124 @@
 
         document.querySelectorAll('.roi-number').forEach(el => counterObserver.observe(el));
 
+        /* ========== VIDEO LIGHTBOX ========== */
+        (function() {
+            const lightbox = document.getElementById('videoLightbox');
+            const player = document.getElementById('videoLightboxPlayer');
+            const playerSource = player ? player.querySelector('source') : null;
+            const closeBtn = document.getElementById('videoLightboxClose');
+            if (!lightbox || !player || !playerSource) return;
+
+            function openLightbox(videoSrc) {
+                playerSource.src = videoSrc;
+                player.load();
+                lightbox.classList.add('active');
+                player.play();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                player.pause();
+            }
+
+            // Hero video trigger
+            const heroTrigger = document.getElementById('heroVideoTrigger');
+            if (heroTrigger) {
+                heroTrigger.addEventListener('click', () => openLightbox('videos/07-Master.mp4'));
+            }
+
+            // Section video triggers
+            document.querySelectorAll('.section-video[data-video]').forEach(el => {
+                el.addEventListener('click', () => openLightbox(el.dataset.video));
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
+        })();
+
+        /* ========== ROI CALCULATOR ========== */
+        (function() {
+            const users = document.getElementById('roiUsers');
+            const clients = document.getElementById('roiClients');
+            const usersVal = document.getElementById('roiUsersVal');
+            const clientsVal = document.getElementById('roiClientsVal');
+
+            function calc() {
+                const u = parseInt(users.value);
+                const c = parseInt(clients.value);
+                usersVal.textContent = u;
+                clientsVal.textContent = c;
+
+
+                // Gain par dossier : LDM (18 min) + recherche/centralisation (8 min) + communication (4 min) = 30 min
+                const hoursSaved = Math.round(c * 30 / 60);
+                // Coût horaire moyen collaborateur (salaire + charges)
+                const gain = hoursSaved * 40;
+                // Nouveau pricing : 29€ plateforme + 12€/user, dossiers illimités
+                const costMonth = 29 + 12 * u;
+                const costYear = Math.round(costMonth * 12);
+                // ROI : nb de mois pour que les économies couvrent l'abonnement
+                const monthlyGain = gain / 12;
+                const roiMonths = monthlyGain > costMonth ? Math.max(1, Math.ceil(costMonth / (monthlyGain - costMonth) + 1)) : 99;
+                // Simplified: months until cumulative savings >= cumulative cost
+                const roiSimple = monthlyGain > 0 ? Math.max(1, Math.ceil(costMonth / monthlyGain)) : 99;
+
+                document.getElementById('roiHours').textContent = hoursSaved + 'h+';
+                document.getElementById('roiGain').textContent = gain.toLocaleString('fr-FR') + ' €';
+                document.getElementById('roiMonths').textContent = roiSimple <= 1 ? '< 1 mois' : '< ' + roiSimple + ' mois';
+                document.getElementById('roiCost').textContent =
+                    'Abonnement Gizé : ' + Math.round(costMonth) + ' € HT / mois — soit ' + costYear.toLocaleString('fr-FR') + ' € / an';
+            }
+
+            users.addEventListener('input', calc);
+            clients.addEventListener('input', calc);
+            calc();
+        })();
+
+        /* ========== EXIT-INTENT POPUP ========== */
+        (function() {
+            const popup = document.getElementById('exitPopup');
+            const closeBtn = document.getElementById('exitPopupClose');
+            if (!popup || !closeBtn) return;
+
+            function closePopup() {
+                popup.classList.remove('active');
+                localStorage.setItem('gize_exit_popup_dismissed', '1');
+            }
+
+            // Close button always works
+            closeBtn.addEventListener('click', closePopup);
+            popup.addEventListener('click', (e) => { if (e.target === popup) closePopup(); });
+
+            // Only show if not dismissed, and after 30s on page
+            if (localStorage.getItem('gize_exit_popup_dismissed')) return;
+            let canShow = false;
+            setTimeout(() => { canShow = true; }, 30000);
+
+            document.addEventListener('mouseout', (e) => {
+                if (!canShow) return;
+                if (e.clientY < 5 && e.relatedTarget == null) {
+                    canShow = false;
+                    popup.classList.add('active');
+                }
+            });
+        })();
+
+        /* ========== FAQ ACCORDION ========== */
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+                if (!wasOpen) item.classList.add('open');
+            });
+        });
+
         /* ========== EMAIL FORMS ========== */
+        // TODO: Replace XXXXX with your Formspree form ID (create one at formspree.io)
+        const FORMSPREE_URL = 'https://formspree.io/f/XXXXX';
+
         function handleFormSubmit(formId, successId) {
             const form = document.getElementById(formId);
             const success = document.getElementById(successId);
@@ -1616,9 +2507,17 @@
                 const email = form.querySelector('input[type="email"]').value;
                 if (!email) return;
 
+                // Save to localStorage (backup)
                 const leads = JSON.parse(localStorage.getItem('gize_leads') || '[]');
                 leads.push({ email, date: new Date().toISOString(), source: formId });
                 localStorage.setItem('gize_leads', JSON.stringify(leads));
+
+                // Send to Formspree (email notification)
+                fetch(FORMSPREE_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ email, source: formId, _subject: 'Nouvelle demande de demo Gize' })
+                }).catch(() => { /* localStorage backup already saved */ });
 
                 form.style.display = 'none';
                 success.classList.add('visible');
@@ -1629,6 +2528,18 @@
 
         handleFormSubmit('heroForm', 'heroSuccess');
         handleFormSubmit('ctaForm', 'ctaSuccess');
+        handleFormSubmit('exitForm', 'exitSuccess');
+
+        /* ========== COOKIE CONSENT ========== */
+        (function() {
+            if (localStorage.getItem('gize_cookie_consent')) return;
+            const banner = document.getElementById('cookieBanner');
+            banner.style.display = 'flex';
+            document.getElementById('cookieAccept').addEventListener('click', () => {
+                localStorage.setItem('gize_cookie_consent', 'accepted');
+                banner.style.display = 'none';
+            });
+        })();
     </script>
 </body>
 </html>
