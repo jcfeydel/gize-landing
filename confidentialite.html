@@ -3,52 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de confidentialite — Gize</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1B2D'/%3E%3Cpath d='M22 11.5a6.5 6.5 0 1 0 0 9V16h-5' fill='none' stroke='%2310B981' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
     <style>
+        /* ========== POLICE INTER — hébergée par gizedoc.com, aucune requête tierce ========== */
+        /* Sous-ensemble latin téléchargé depuis Google Fonts. Le fichier droit est variable (axe wght) ; la page utilise 400, 600, 800 et l'italique 400. */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+            src: url('fonts/inter-latin-variable.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/inter-latin-italic-400.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', system-ui, sans-serif; color: #374151; background: #FFFFFF; line-height: 1.7; font-size: 17px; }
-        .container { max-width: 720px; margin: 0 auto; padding: 80px 24px 120px; }
-        h1 { font-family: 'Inter', system-ui, sans-serif; font-weight: 800; color: #0F1B2D; font-size: 2rem; margin-bottom: 40px; }
-        h2 { font-family: 'Inter', system-ui, sans-serif; font-weight: 800; color: #0F1B2D; font-size: 1.3rem; margin: 32px 0 12px; }
-        p, li { margin-bottom: 12px; color: #6B7280; }
-        ul { padding-left: 20px; margin-bottom: 16px; }
-        a { color: #10B981; }
-        .back { display: inline-block; margin-bottom: 32px; font-size: 0.9rem; font-weight: 600; color: #10B981; text-decoration: none; }
-        .back:hover { text-decoration: underline; }
+        html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        :root {
+            --navy: #0F1B2D;
+            --navy-deep: #0A1220;
+            --emerald: #10B981;
+            --emerald-dark: #059669;
+            --white: #FFFFFF;
+            --off-white: #F9FAFB;
+            --text: #374151;
+            --text-secondary: #6B7280;
+            --text-tertiary: #9CA3AF;
+            --border: #E5E7EB;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+        a { color: var(--emerald-dark); text-decoration: underline; text-underline-offset: 2px; }
+        a:hover { color: var(--emerald); }
+        h1, h2 { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--navy); line-height: 1.2; font-weight: 800; }
+        h1 { font-size: clamp(2rem, 4vw, 2.6rem); letter-spacing: -0.03em; }
+        h2 { font-size: clamp(1.15rem, 2.2vw, 1.35rem); letter-spacing: -0.015em; margin: 44px 0 14px; }
+        p, li { color: var(--text-secondary); }
+        p + p { margin-top: 14px; }
+        ul { margin: 14px 0 0 22px; }
+        li { margin-bottom: 8px; }
+        strong { color: var(--navy); font-weight: 600; }
+        .nav {
+            position: sticky; top: 0; z-index: 10;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav .container { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+        .nav-logo { font-weight: 800; font-size: 1.3rem; color: var(--navy); letter-spacing: -0.02em; text-decoration: none; }
+        .nav-back { font-size: 0.9rem; font-weight: 600; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .page { padding: 64px 0 96px; }
+        .page-label {
+            font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.15em; color: var(--emerald); display: block; margin-bottom: 16px;
+        }
+        .page-date { font-size: 0.9rem; color: var(--text-tertiary); margin-top: 18px; }
+        .card {
+            margin-top: 20px; padding: 24px 28px;
+            background: var(--off-white); border: 1px solid var(--border); border-radius: 14px;
+        }
+        .card p, .card li { color: var(--text); }
+        .footer { background: var(--navy-deep); color: rgba(255, 255, 255, 0.55); padding: 36px 0; font-size: 0.88rem; }
+        .footer .container { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; max-width: 1320px; }
+        .footer a { color: rgba(255, 255, 255, 0.7); text-decoration: none; }
+        .footer a:hover { color: var(--emerald); }
+        .footer-links { display: flex; gap: 26px; flex-wrap: wrap; }
+        :focus-visible { outline: 3px solid var(--emerald); outline-offset: 3px; border-radius: 4px; }
+        @media (max-width: 768px) {
+            body { font-size: 16px; }
+            .page { padding: 48px 0 72px; }
+            .footer .container { flex-direction: column; text-align: center; }
+        }
     </style>
+    <title>Politique de confidentialité — Gizedoc</title>
+    <meta name="description" content="Politique de confidentialité du site gizedoc.com : aucune collecte de données, aucun cookie, aucune mesure d'audience.">
+    <link rel="canonical" href="https://gizedoc.com/confidentialite.html">
 </head>
 <body>
-    <div class="container">
-        <a href="/" class="back">&larr; Retour au site</a>
-        <h1>Politique de confidentialite</h1>
-        <p><em>Derniere mise a jour : 30 mars 2026</em></p>
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav-logo">GIZEDOC</a>
+            <a href="index.html" class="nav-back">Retour à l'accueil</a>
+        </div>
+    </nav>
 
-        <h2>Responsable du traitement</h2>
-        <p>GIZE SAS — <a href="mailto:contact@gize.fr">contact@gize.fr</a></p>
+    <main class="page">
+        <div class="container">
+            <span class="page-label">Vie privée</span>
+            <h1>Politique de confidentialité</h1>
+            <p class="page-date">Dernière mise à jour : 21 septembre 2026.</p>
 
-        <h2>Donnees collectees</h2>
-        <p>Ce site collecte uniquement :</p>
-        <ul>
-            <li><strong>Adresse email</strong> — saisie volontairement via le formulaire "Demander une demo"</li>
-            <li><strong>Donnees de navigation anonymisees</strong> — via Plausible Analytics (conforme RGPD, sans cookies, heberge en UE)</li>
-        </ul>
+            <p>Cette politique concerne le <strong>site vitrine gizedoc.com</strong>. L'usage de l'application Gizedoc elle-même, pendant la phase de pilote, fera l'objet d'un contrat et d'une documentation distincts, communiqués avant toute mise en service.</p>
 
-        <h2>Finalite</h2>
-        <p>Votre email est utilise uniquement pour vous recontacter suite a votre demande de demonstration. Aucun email commercial non sollicite.</p>
+            <h2>Responsable du traitement</h2>
+            <div class="card">
+                <p><strong>Jean-Christophe Feydel</strong> — entrepreneur individuel (EI)</p>
+                <p>18 rue du Torpilleur Sirocco, 63100 Clermont-Ferrand, France</p>
+                <p>SIREN : 932 484 678</p>
+                <p>Contact : <a href="mailto:jcfeydel@gizedoc.com">jcfeydel@gizedoc.com</a></p>
+                <p>Aucun délégué à la protection des données n'a été désigné ; les demandes sont traitées directement par l'éditeur.</p>
+            </div>
 
-        <h2>Cookies</h2>
-        <p>Ce site utilise uniquement des cookies strictement necessaires (memorisation du consentement). Aucun cookie publicitaire, aucun tracker tiers.</p>
+            <h2>Ce site ne collecte rien</h2>
+            <ul>
+                <li>Aucun formulaire : le seul moyen de contact proposé est un lien d'envoi d'e-mail, qui ouvre votre propre messagerie.</li>
+                <li>Aucun compte, aucun espace client, aucune inscription.</li>
+                <li><strong>Aucun cookie</strong>, aucun traceur publicitaire, aucun bouton de réseau social.</li>
+                <li>Aucune mesure d'audience, aucun outil d'analyse statistique.</li>
+                <li>Aucun stockage dans le navigateur (ni <em>localStorage</em>, ni <em>sessionStorage</em>).</li>
+            </ul>
+            <p>Aucun bandeau de consentement n'est donc affiché : il n'y a pas de dépôt à consentir.</p>
 
-        <h2>Hebergement des donnees</h2>
-        <p>Les donnees applicatives de la plateforme Gize sont hebergees en France, sur des serveurs conformes RGPD. Aucun transfert hors Union europeenne.</p>
+            <h2>Si vous nous écrivez</h2>
+            <p>En écrivant à l'adresse indiquée sur le site, vous transmettez volontairement les données contenues dans votre message : votre adresse e-mail, votre identité et, le cas échéant, le nom de votre cabinet.</p>
+            <ul>
+                <li><strong>Finalité</strong> : répondre à votre demande et, si vous le souhaitez, organiser une démonstration ou un échange sur le pilote.</li>
+                <li><strong>Base légale</strong> : l'exécution de mesures précontractuelles prises à votre demande, et l'intérêt légitime de l'éditeur à répondre à ses correspondants.</li>
+                <li><strong>Destinataire</strong> : l'éditeur seul. Aucune revente, aucune cession, aucune transmission à des fins publicitaires.</li>
+                <li><strong>Durée de conservation</strong> : le temps de l'échange, puis au plus trois ans après le dernier contact de votre part, sauf relation contractuelle en cours.</li>
+            </ul>
+            <p>Les messages transitent par la messagerie professionnelle de l'éditeur, opérée par Google (Google Workspace, société établie aux États-Unis), qui les conserve selon ses propres conditions.</p>
 
-        <h2>Vos droits</h2>
-        <p>Conformement au RGPD, vous disposez d'un droit d'acces, de rectification, de suppression et de portabilite de vos donnees. Pour exercer ces droits : <a href="mailto:contact@gize.fr">contact@gize.fr</a>.</p>
+            <h2>Traitements liés à l'affichage du site</h2>
+            <p>Un seul traitement technique échappe à l'éditeur ; il est signalé par souci de transparence :</p>
+            <ul>
+                <li><strong>Hébergement</strong> : le site est hébergé par GitHub, Inc. (GitHub Pages), aux États-Unis. Comme tout hébergeur, GitHub journalise des données techniques de connexion, dont l'adresse IP, pour distribuer les pages et assurer la sécurité du service.</li>
+            </ul>
+            <p><strong>Polices de caractères</strong> : la police Inter est servie depuis <em>gizedoc.com</em>, au même titre que les pages. Aucune requête n'est adressée à Google Fonts ni à aucun autre domaine tiers lors de l'affichage de ce site.</p>
 
-        <h2>Securite</h2>
-        <p>Chiffrement AES-256 au repos, TLS 1.3 en transit. Aucun collaborateur Gize n'a acces au contenu de vos documents.</p>
-    </div>
+            <h2>Vos droits</h2>
+            <p>Conformément au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité sur les données que vous nous avez transmises.</p>
+            <p>Pour les exercer, écrivez à <a href="mailto:jcfeydel@gizedoc.com">jcfeydel@gizedoc.com</a>. Une réponse vous sera apportée dans un délai d'un mois.</p>
+            <p>Vous pouvez également introduire une réclamation auprès de la CNIL : 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+
+            <h2>Modifications</h2>
+            <p>Toute évolution de ce site qui introduirait une collecte de données, un cookie ou une mesure d'audience donnerait lieu à une mise à jour de cette page, et à l'information préalable requise.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div>&copy; 2026 Gizedoc — Jean-Christophe Feydel EI</div>
+            <div class="footer-links">
+                <a href="mailto:jcfeydel@gizedoc.com">jcfeydel@gizedoc.com</a>
+                <a href="mentions-legales.html">Mentions légales</a>
+                <a href="confidentialite.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

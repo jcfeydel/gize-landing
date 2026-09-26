@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizé — Lettres de mission intelligentes pour experts-comptables</title>
-    <meta name="description" content="Créez, personnalisez et gérez vos lettres de mission en 2 minutes grâce à l'IA. Factur-X inclus. Conforme RGPD. Essai gratuit.">
-    <meta name="keywords" content="lettre de mission expert comptable, logiciel lettre de mission, LDM automatique, Factur-X expert comptable">
-    <meta property="og:title" content="Gizé — Lettres de mission intelligentes pour experts-comptables">
-    <meta property="og:description" content="Créez, personnalisez et gérez vos lettres de mission en 2 minutes grâce à l'IA. Factur-X inclus.">
+    <title>Gizedoc — Production documentaire pour cabinets d'expertise comptable</title>
+    <meta name="description" content="Gizedoc importe vos modèles Word, fait saisir les données une fois par dossier, produit le PDF et la facture Factur-X, fige la version validée et scelle l'archive. Version pré-pilote.">
+    <meta name="keywords" content="lettre de mission expert comptable, production documentaire cabinet comptable, modèle Word docx, Factur-X EN 16931">
+    <meta property="og:title" content="Gizedoc — Production documentaire pour cabinets d'expertise comptable">
+    <meta property="og:description" content="De votre modèle Word au dossier archivé : saisie unique, document validé et figé, PDF et Factur-X profil EN 16931.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://jcfeydel.github.io/gize-landing/og-image.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Gizedoc">
+    <meta property="og:url" content="https://gizedoc.com/">
+    <meta property="og:image" content="https://gizedoc.com/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://jcfeydel.github.io/gize-landing/">
+    <meta property="og:image:alt" content="Gizedoc — De votre modèle Word au dossier archivé. Version pré-pilote.">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://gizedoc.com/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1B2D'/%3E%3Cpath d='M22 11.5a6.5 6.5 0 1 0 0 9V16h-5' fill='none' stroke='%2310B981' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
     <style>
+        /* ========== POLICE INTER — hébergée par gizedoc.com, aucune requête tierce ========== */
+        /* Sous-ensemble latin téléchargé depuis Google Fonts. Le fichier est variable (axe wght) ; la page utilise 400, 500, 600, 700 et 800. */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+            src: url('fonts/inter-latin-variable.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
         /* ========== RESET & BASE ========== */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--text); background: var(--white); line-height: 1.65; font-size: 17px; overflow-x: hidden; }
+        body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: var(--white); line-height: 1.65; font-size: 17px; overflow-x: hidden; }
         img { max-width: 100%; display: block; }
         a { text-decoration: none; color: inherit; }
         ul, ol { list-style: none; }
@@ -48,12 +60,12 @@
         }
 
         /* ========== TYPOGRAPHY ========== */
-        h1, h2, h3 { font-family: 'Inter', system-ui, sans-serif; color: var(--navy); line-height: 1.15; font-weight: 800; }
+        h1, h2, h3 { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--navy); line-height: 1.15; font-weight: 800; }
         h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); letter-spacing: -0.035em; }
         h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); letter-spacing: -0.025em; }
         h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 700; }
         .section-label {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
@@ -70,6 +82,11 @@
             line-height: 1.7;
         }
         .text-center { text-align: center; }
+        .sr-only {
+            position: absolute; width: 1px; height: 1px;
+            padding: 0; margin: -1px; overflow: hidden;
+            clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+        }
 
         /* ========== LAYOUT ========== */
         .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
@@ -91,7 +108,7 @@
         }
         .nav .container { display: flex; align-items: center; justify-content: space-between; }
         .nav-logo {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 800;
             font-size: 1.6rem;
             font-weight: 700;
             color: var(--navy);
@@ -184,36 +201,11 @@
         .btn-primary:hover { background: var(--emerald-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); }
 
         /* ========== EMAIL FORM ========== */
-        .email-form { display: flex; gap: 12px; max-width: 480px; }
-        .email-form input[type="email"] {
-            flex: 1;
-            padding: 16px 20px;
-            border: 2px solid var(--border);
-            border-radius: 10px;
-            font-size: 1rem;
-            color: var(--text);
-            background: var(--white);
-            transition: border-color 0.2s;
-            min-width: 0;
-        }
-        .email-form input[type="email"]:focus { border-color: var(--emerald); }
-        .email-form input[type="email"]::placeholder { color: var(--text-tertiary); }
         .form-note {
             font-size: 0.85rem;
             color: var(--text-tertiary);
             margin-top: 14px;
         }
-        .form-success {
-            display: none;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 24px;
-            background: var(--emerald-light);
-            border-radius: 10px;
-            color: var(--emerald-dark);
-            font-weight: 500;
-        }
-        .form-success.visible { display: flex; }
 
         /* ========== HERO ========== */
         .hero {
@@ -250,7 +242,6 @@
             margin-bottom: 44px;
             max-width: 560px;
         }
-        .hero .email-form { margin-bottom: 0; }
         .hero .form-note { margin-top: 16px; }
         .hero-badges {
             display: flex; flex-wrap: wrap; gap: 20px;
@@ -268,69 +259,6 @@
         .hero-visual {
             position: relative;
             z-index: 1;
-        }
-        .hero-video-wrapper {
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(15, 27, 45, 0.12), 0 4px 20px rgba(15, 27, 45, 0.06);
-            border: 1px solid var(--border);
-            background: var(--white);
-        }
-        .hero-video-wrapper video {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-        .hero-video-caption {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 16px;
-            background: var(--off-white);
-            border-top: 1px solid var(--border);
-            font-size: 0.82rem;
-            color: var(--text-tertiary);
-            font-weight: 500;
-        }
-        .hero-video-caption svg { width: 14px; height: 14px; color: var(--emerald); }
-
-        /* ========== SECTION VIDEO ========== */
-        .section-video {
-            max-width: 800px;
-            margin: 48px auto 0;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 12px 40px rgba(15, 27, 45, 0.08);
-            border: 1px solid var(--border);
-            background: var(--white);
-            cursor: zoom-in;
-            position: relative;
-        }
-        .section-video video {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-        .section-video-hint {
-            position: absolute;
-            bottom: 12px;
-            right: 12px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            padding: 6px 12px;
-            background: rgba(15, 27, 45, 0.7);
-            backdrop-filter: blur(8px);
-            border-radius: 100px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.85);
-            pointer-events: none;
-        }
-        .facturx .section-video {
-            border-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
         }
 
         /* ========== FAQ ========== */
@@ -351,7 +279,7 @@
             background: none;
             cursor: pointer;
             text-align: left;
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
             font-size: 1.05rem;
             font-weight: 600;
             color: var(--navy);
@@ -382,118 +310,6 @@
             line-height: 1.7;
         }
 
-        /* ========== TESTIMONIALS ========== */
-        .testimonials { background: var(--white); }
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-            margin-top: 56px;
-        }
-        .testimonial-card {
-            padding: 36px 28px;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .testimonial-card:hover {
-            border-color: transparent;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-            transform: translateY(-3px);
-        }
-        .testimonial-stars {
-            display: flex;
-            gap: 4px;
-            color: #F59E0B;
-            font-size: 1.1rem;
-        }
-        .testimonial-quote {
-            font-size: 1rem;
-            color: var(--text);
-            line-height: 1.7;
-            font-style: italic;
-            flex: 1;
-        }
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-        .testimonial-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--emerald-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--emerald-dark);
-            flex-shrink: 0;
-        }
-        .testimonial-name {
-            font-size: 0.92rem;
-            font-weight: 600;
-            color: var(--navy);
-        }
-        .testimonial-role {
-            font-size: 0.82rem;
-            color: var(--text-tertiary);
-            margin-top: 2px;
-        }
-
-        /* ========== INTEGRATIONS ========== */
-        .integrations {
-            background: var(--off-white);
-            padding: 64px 0;
-        }
-        .integrations-label {
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 32px;
-        }
-        .integrations-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 48px;
-            flex-wrap: wrap;
-        }
-        .integration-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            opacity: 0.7;
-            transition: opacity 0.2s;
-        }
-        .integration-item:hover { opacity: 1; }
-        .integration-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--white);
-            flex-shrink: 0;
-        }
-
         /* ========== TEAM ========== */
         .team { background: var(--white); }
         .team-content {
@@ -516,7 +332,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 800;
             font-size: 4rem;
             font-weight: 700;
             color: var(--emerald-dark);
@@ -550,199 +366,6 @@
         }
         .team-links a:hover { color: var(--emerald); }
         .team-links svg { width: 16px; height: 16px; }
-
-        /* ========== ROI CALCULATOR ========== */
-        .roi-calc {
-            max-width: 700px;
-            margin: 48px auto 0;
-            padding: 40px;
-            background: var(--white);
-            border: 2px solid var(--emerald);
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.08);
-        }
-        .roi-calc-title {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--navy);
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        .roi-calc-inputs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-bottom: 32px;
-        }
-        .roi-calc-field label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-        }
-        .roi-calc-field input[type="range"] {
-            width: 100%;
-            accent-color: var(--emerald);
-            margin-bottom: 4px;
-        }
-        .roi-calc-value {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--navy);
-            text-align: center;
-        }
-        .roi-calc-results {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding-top: 28px;
-            border-top: 2px solid var(--border);
-        }
-        .roi-calc-stat {
-            text-align: center;
-        }
-        .roi-calc-stat-value {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--emerald);
-            line-height: 1.2;
-        }
-        .roi-calc-stat-label {
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-            margin-top: 6px;
-        }
-        .roi-calc-cost {
-            text-align: center;
-            margin-top: 24px;
-            padding: 16px;
-            background: var(--emerald-light);
-            border-radius: 12px;
-            font-size: 0.95rem;
-            color: var(--emerald-dark);
-            font-weight: 600;
-        }
-
-        /* ========== EXIT POPUP ========== */
-        /* ========== VIDEO LIGHTBOX ========== */
-        .video-lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 250;
-            background: rgba(10, 18, 32, 0.92);
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-            cursor: zoom-out;
-        }
-        .video-lightbox.active { display: flex; }
-        .video-lightbox video {
-            max-width: 90vw;
-            max-height: 85vh;
-            border-radius: 16px;
-            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
-            cursor: default;
-        }
-        .video-lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 24px;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            color: rgba(255, 255, 255, 0.7);
-            transition: all 0.2s;
-        }
-        .video-lightbox-close:hover { background: rgba(255, 255, 255, 0.2); color: white; }
-        .hero-video-wrapper { cursor: zoom-in; position: relative; }
-        .hero-video-play-hint {
-            position: absolute;
-            bottom: 64px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
-            background: rgba(15, 27, 45, 0.75);
-            backdrop-filter: blur(8px);
-            border-radius: 100px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.85);
-            pointer-events: none;
-            opacity: 0.9;
-            transition: opacity 0.3s;
-        }
-        .hero-video-wrapper:hover .hero-video-play-hint { opacity: 1; }
-
-        .exit-popup-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 27, 45, 0.6);
-            z-index: 300;
-            justify-content: center;
-            align-items: center;
-            padding: 24px;
-        }
-        .exit-popup-overlay.active { display: flex; }
-        .exit-popup {
-            background: var(--white);
-            border-radius: 20px;
-            max-width: 520px;
-            width: 100%;
-            padding: 48px 40px;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        .exit-popup-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            width: 32px;
-            height: 32px;
-            background: var(--off-white);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            color: var(--text-tertiary);
-            transition: all 0.2s;
-        }
-        .exit-popup-close:hover { background: var(--border); color: var(--navy); }
-        .exit-popup h3 {
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-        }
-        .exit-popup p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 28px;
-        }
-        .exit-popup .email-form {
-            justify-content: center;
-        }
-        .exit-popup .form-success {
-            justify-content: center;
-        }
 
         /* ========== PROBLEM ========== */
         .problem { background: var(--white); }
@@ -943,7 +566,7 @@
             border: 1px solid #A7F3D0;
         }
         .comparison-col-title {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
             font-size: 0.8rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -966,24 +589,6 @@
         .comparison-item svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; }
         .before .comparison-item svg { color: var(--red); }
         .after .comparison-item svg { color: var(--emerald); }
-        .comparison-stat {
-            margin-top: 48px;
-            padding: 28px 36px;
-            background: var(--navy);
-            border-radius: 14px;
-            text-align: center;
-            color: var(--white);
-        }
-        .comparison-stat p {
-            font-size: 1.15rem;
-            font-weight: 500;
-            line-height: 1.6;
-        }
-        .comparison-stat strong {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
-            font-size: 1.4rem;
-            color: var(--emerald);
-        }
 
         /* ========== FACTUR-X ========== */
         .facturx {
@@ -1005,7 +610,7 @@
         .facturx h2 { color: var(--white); }
         .facturx .section-subtitle { color: rgba(255, 255, 255, 0.65); }
         .facturx-date {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 800;
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             color: var(--emerald);
@@ -1041,7 +646,7 @@
             border: 1px solid rgba(16, 185, 129, 0.25);
         }
         .facturx-card .price {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 800;
             font-size: 2.5rem;
             font-weight: 700;
             margin: 12px 0 8px;
@@ -1127,54 +732,6 @@
 
         /* ========== PRICING ========== */
         .pricing { background: var(--off-white); }
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-top: 56px;
-        }
-        .pricing-card {
-            background: var(--white);
-            padding: 40px 32px;
-            border-radius: 16px;
-            text-align: center;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
-        }
-        .pricing-card:hover {
-            border-color: var(--emerald);
-            box-shadow: 0 8px 30px rgba(16, 185, 129, 0.1);
-            transform: translateY(-4px);
-        }
-        .pricing-card .pricing-label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-tertiary);
-            margin-bottom: 16px;
-        }
-        .pricing-card .pricing-amount {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--navy);
-            line-height: 1;
-        }
-        .pricing-card .pricing-amount span { font-size: 1.2rem; font-weight: 500; }
-        .pricing-card .pricing-period {
-            font-size: 0.9rem;
-            color: var(--text-tertiary);
-            margin-top: 4px;
-        }
-        .pricing-card .pricing-desc {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-            line-height: 1.6;
-        }
         .pricing-example {
             margin-top: 40px;
             padding: 32px;
@@ -1197,67 +754,11 @@
             line-height: 1.7;
         }
         .pricing-example strong {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 800;
             font-size: 1.8rem;
             color: var(--navy);
             display: block;
             margin: 12px 0;
-        }
-        .pricing-free {
-            text-align: center;
-            margin-top: 32px;
-            padding: 20px;
-            background: var(--emerald-light);
-            border-radius: 12px;
-        }
-        .pricing-free p {
-            font-size: 0.95rem;
-            color: var(--emerald-dark);
-            font-weight: 600;
-        }
-        .pricing-free span {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 400;
-            color: var(--text-secondary);
-            margin-top: 4px;
-        }
-
-        /* ========== ROI ========== */
-        .roi { background: var(--white); }
-        .roi-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin-top: 56px;
-        }
-        .roi-card {
-            text-align: center;
-            padding: 48px 24px;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            transition: all 0.3s;
-        }
-        .roi-card:hover { border-color: var(--emerald); }
-        .roi-number {
-            font-family: 'Inter', system-ui, sans-serif; font-weight: 800;
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 700;
-            color: var(--emerald);
-            line-height: 1;
-            margin-bottom: 12px;
-            font-variant-numeric: tabular-nums;
-        }
-        .roi-label {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 8px;
-        }
-        .roi-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
         }
 
         /* ========== CTA FINAL ========== */
@@ -1292,17 +793,6 @@
         .cta-final .email-form input[type="email"]:focus { border-color: var(--emerald); }
         .cta-final .form-note { color: rgba(255, 255, 255, 0.4); }
         .cta-final .form-success { background: rgba(16, 185, 129, 0.15); color: var(--emerald); }
-        .cta-final-trust {
-            display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
-            margin-top: 48px;
-            padding-top: 32px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .cta-final-trust span {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.45);
-            font-weight: 500;
-        }
 
         /* ========== FOOTER ========== */
         .footer {
@@ -1329,6 +819,59 @@
         }
         .footer-links a:hover { color: rgba(255, 255, 255, 0.7); }
 
+        /* ========== PHILOSOPHIE ========== */
+        .philosophy { background: var(--navy); color: var(--white); position: relative; overflow: hidden; }
+        .philosophy::before {
+            content: ''; position: absolute; top: -40%; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 900px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.10) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .philosophy .container { position: relative; }
+        .philosophy h2 { color: var(--white); }
+        .philosophy h3 { color: var(--white); font-size: 1.1rem; }
+        .philosophy .section-subtitle { color: rgba(255, 255, 255, 0.65); }
+        .philosophy-figures {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+            max-width: 860px; margin: 64px auto 0;
+        }
+        .philosophy-figure {
+            border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 20px;
+            padding: 36px 32px; background: rgba(255, 255, 255, 0.03);
+        }
+        .philosophy-figure .figure-value {
+            display: block; font-size: clamp(3rem, 7vw, 4.5rem); font-weight: 800;
+            letter-spacing: -0.04em; line-height: 1; color: var(--emerald);
+        }
+        .philosophy-figure .figure-label {
+            display: block; margin-top: 12px; font-size: 1.25rem; font-weight: 700; color: var(--white);
+        }
+        .philosophy-figure p, .principle p {
+            margin-top: 10px; font-size: 0.98rem; line-height: 1.65; color: rgba(255, 255, 255, 0.65);
+        }
+        .principles {
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+            margin-top: 56px; border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .principle { padding: 32px 24px 0; border-left: 1px solid rgba(255, 255, 255, 0.12); }
+        .principle:first-child { border-left: none; padding-left: 0; }
+        .principle-index {
+            display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em;
+            color: var(--emerald); margin-bottom: 12px;
+        }
+        @media (max-width: 1024px) {
+            .principles { grid-template-columns: repeat(2, 1fr); border-top: none; }
+            .principle, .principle:first-child {
+                padding: 24px 0 28px; border-left: none; border-top: 1px solid rgba(255, 255, 255, 0.12);
+            }
+            .principle:nth-child(odd) { padding-right: 24px; }
+        }
+        @media (max-width: 768px) {
+            .philosophy-figures { grid-template-columns: 1fr; }
+            .principles { grid-template-columns: 1fr; }
+            .principle:nth-child(odd) { padding-right: 0; }
+        }
+
         /* ========== ANIMATIONS ========== */
         .fade-in {
             opacity: 0;
@@ -1343,6 +886,133 @@
         .fade-in-delay-2 { transition-delay: 0.2s; }
         .fade-in-delay-3 { transition-delay: 0.3s; }
 
+        /* ========== HERO FLOW (remplace la vidéo absente) ========== */
+        .hero-flow {
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            box-shadow: 0 20px 60px rgba(15, 27, 45, 0.12), 0 4px 20px rgba(15, 27, 45, 0.06);
+            overflow: hidden;
+        }
+        .hero-flow-title {
+            padding: 16px 24px;
+            background: var(--navy);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+        .hero-flow-list { padding: 8px 24px 4px; }
+        .hero-flow-list li {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero-flow-list li:last-child { border-bottom: none; }
+        .hero-flow-step {
+            flex-shrink: 0;
+            width: 30px; height: 30px;
+            border-radius: 9px;
+            background: var(--emerald-light);
+            color: var(--emerald-dark);
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .hero-flow-list strong { display: block; color: var(--navy); font-size: 0.98rem; font-weight: 700; }
+        .hero-flow-list span.d { display: block; color: var(--text-secondary); font-size: 0.88rem; line-height: 1.5; margin-top: 2px; }
+        .hero-flow-foot {
+            padding: 14px 24px;
+            background: var(--off-white);
+            border-top: 1px solid var(--border);
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+            font-weight: 500;
+        }
+
+        /* ========== ÉTAT DU PRODUIT ========== */
+        .status { background: var(--white); }
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 56px;
+        }
+        .status-card {
+            padding: 32px 28px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--white);
+        }
+        .status-card.now { border-color: var(--emerald); background: #F6FEFB; }
+        .status-card h3 { margin-bottom: 16px; font-size: 1.05rem; }
+        .status-card ul { display: flex; flex-direction: column; gap: 10px; }
+        .status-card li {
+            display: flex; gap: 10px; align-items: flex-start;
+            font-size: 0.92rem; color: var(--text-secondary); line-height: 1.55;
+        }
+        .status-card li::before { content: '—'; color: var(--text-tertiary); flex-shrink: 0; }
+        .status-card.now li::before { content: '\2713'; color: var(--emerald); font-weight: 700; }
+
+        /* ========== TABLEAU DES CAPACITÉS ========== */
+        .competitive-table.capabilities { min-width: 620px; }
+        .competitive-table.capabilities thead th:last-child { min-width: 130px; }
+        .ct-state {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+        .ct-state.now { background: var(--emerald-light); color: var(--emerald-dark); }
+        .ct-state.soon { background: #FEF3C7; color: #92400E; }
+        .ct-state.study { background: var(--border); color: var(--text-secondary); }
+
+        /* ========== BADGE « PRÉVU » ========== */
+        .feature-card .tag-soon {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 2px 9px;
+            border-radius: 999px;
+            background: #FEF3C7;
+            color: #92400E;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            vertical-align: middle;
+        }
+
+        /* ========== FACTUR-X : LISTES ========== */
+        .facturx-list { text-align: left; margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+        .facturx-list li { font-size: 0.92rem; color: rgba(255, 255, 255, 0.72); line-height: 1.5; display: flex; gap: 10px; }
+        .facturx-list li::before { content: '—'; flex-shrink: 0; opacity: 0.6; }
+        .facturx-card.avec .facturx-list li::before { content: '\2713'; color: var(--emerald); opacity: 1; font-weight: 700; }
+        .facturx-source { text-align: center; margin-top: 28px; font-size: 0.88rem; color: rgba(255, 255, 255, 0.5); }
+        .facturx-source a { color: var(--emerald); text-decoration: underline; text-underline-offset: 2px; }
+
+        /* ========== CONTACT DIRECT ========== */
+        .contact-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+        .cta-final .contact-actions { justify-content: center; }
+        .btn-mail svg { width: 20px; height: 20px; margin-right: 10px; }
+        .contact-mail {
+            font-weight: 600;
+            color: var(--emerald-dark);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .cta-final .contact-mail { color: var(--emerald); }
+
+        /* ========== FOCUS CLAVIER ========== */
+        :focus-visible { outline: 3px solid var(--emerald); outline-offset: 3px; border-radius: 6px; }
+        .nav-cta:focus-visible, .btn-primary:focus-visible { outline-offset: 4px; }
+
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
             :root { --section-py: 96px; }
@@ -1352,15 +1022,9 @@
             .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
             .steps-grid::before { display: none; }
             .features-grid { grid-template-columns: 1fr; }
-            .testimonials-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
             .security-grid { grid-template-columns: repeat(2, 1fr); }
-            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
-            .roi-grid { grid-template-columns: repeat(3, 1fr); }
-            .section-video { max-width: 100%; }
             .team-content { flex-direction: column; text-align: center; }
             .team-links { justify-content: center; }
-            .roi-calc-inputs { grid-template-columns: 1fr; }
-            .roi-calc-results { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -1371,15 +1035,12 @@
             .nav-mobile { display: block; }
             .nav-mobile-overlay { display: block; }
             .hero { min-height: auto; padding: 120px 0 80px; }
-            .email-form { flex-direction: column; }
-            .email-form .btn-primary { width: 100%; }
             .hero-badges { gap: 16px; }
             .problem-grid { grid-template-columns: 1fr; }
             .steps-grid { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
             .comparison-grid { grid-template-columns: 1fr; }
             .facturx-compare { grid-template-columns: 1fr; }
             .security-grid { grid-template-columns: 1fr; }
-            .roi-grid { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
             .footer .container { flex-direction: column; text-align: center; }
         }
     </style>
@@ -1389,13 +1050,13 @@
     <!-- ========== NAV ========== -->
     <nav class="nav" id="nav">
         <div class="container">
-            <a href="#" class="nav-logo">GIZÉ</a>
+            <a href="#hero" class="nav-logo">GIZEDOC</a>
             <div class="nav-links">
                 <a href="#fonctionnalites">Fonctionnalités</a>
-                <a href="#comparatif">Comparatif</a>
+                <a href="#capacites">Capacités</a>
                 <a href="#tarifs">Tarifs</a>
                 <a href="#securite">Sécurité</a>
-                <a href="#contact" class="nav-cta">Demander une démo</a>
+                <a href="#contact" class="nav-cta">Nous écrire</a>
             </div>
             <button class="nav-hamburger" id="hamburger" aria-label="Menu">
                 <span></span><span></span><span></span>
@@ -1405,10 +1066,10 @@
     <div class="nav-mobile-overlay" id="mobileOverlay"></div>
     <nav class="nav-mobile" id="mobileNav">
         <a href="#fonctionnalites" class="mobile-link">Fonctionnalités</a>
-        <a href="#comparatif" class="mobile-link">Comparatif</a>
+        <a href="#capacites" class="mobile-link">Capacités</a>
         <a href="#tarifs" class="mobile-link">Tarifs</a>
         <a href="#securite" class="mobile-link">Sécurité</a>
-        <a href="#contact" class="nav-cta mobile-link">Demander une démo</a>
+        <a href="#contact" class="nav-cta mobile-link">Nous écrire</a>
     </nav>
 
     <main>
@@ -1416,46 +1077,54 @@
         <section class="hero" id="hero">
             <div class="container">
                 <div class="hero-content">
-                    <span class="section-label">Plateforme documentaire pour experts-comptables</span>
-                    <h1>Vos lettres de mission, devenues intelligentes.</h1>
-                    <p class="hero-subtitle">Créez, personnalisez et gérez vos LDM en 2 minutes. Sans changer vos habitudes. Sans formation.</p>
-                    <form class="email-form" id="heroForm">
-                        <input type="email" placeholder="votre@email.fr" required aria-label="Adresse email">
-                        <button type="submit" class="btn-primary">Demander une démo</button>
-                    </form>
-                    <div class="form-success" id="heroSuccess">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 6L9 17l-5-5"/></svg>
-                        Merci ! Nous vous contacterons rapidement.
+                    <span class="section-label">Production documentaire pour cabinets d'expertise comptable</span>
+                    <h1>De votre modèle Word au dossier archivé.</h1>
+                    <p class="hero-subtitle">Gizedoc importe vos modèles .docx, vous aide à déclarer leurs champs, fait saisir les données une seule fois par dossier, puis produit le document, fige la version validée et scelle l'archive.</p>
+                    <div class="contact-actions">
+                        <a class="btn-primary btn-mail" href="mailto:jcfeydel@gizedoc.com?subject=Gizedoc%20%E2%80%94%20demande%20de%20d%C3%A9monstration">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+                            Demander une démonstration
+                        </a>
+                        <a class="contact-mail" href="mailto:jcfeydel@gizedoc.com">jcfeydel@gizedoc.com</a>
                     </div>
-                    <p class="form-note">Essai gratuit — 3 dossiers, sans engagement. <br>Nous respectons votre vie privée.</p>
+                    <p class="form-note">Écrivez-nous directement : ce site n'héberge aucun formulaire et ne collecte aucune donnée.</p>
                     <div class="hero-badges">
                         <div class="hero-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            Vos modèles Word, pas une page blanche
+                        </div>
+                        <div class="hero-badge">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                            Factur-X inclus
+                            Factur-X, profil EN 16931
                         </div>
                         <div class="hero-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                            Hébergé en France
-                        </div>
-                        <div class="hero-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                            Conforme RGPD
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+                            Version pré-pilote
                         </div>
                     </div>
                 </div>
                 <div class="hero-visual fade-in">
-                    <div class="hero-video-wrapper" id="heroVideoTrigger">
-                        <video autoplay muted loop playsinline preload="metadata">
-                            <source src="videos/07-Master.mp4" type="video/mp4">
-                        </video>
-                        <div class="hero-video-play-hint">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                            Cliquer pour agrandir
-                        </div>
-                        <div class="hero-video-caption">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                            De votre modèle Word à un dossier complet — en 2 minutes
-                        </div>
+                    <div class="hero-flow">
+                        <div class="hero-flow-title">Le parcours d'un document</div>
+                        <ol class="hero-flow-list">
+                            <li>
+                                <span class="hero-flow-step">1</span>
+                                <div><strong>Votre modèle .docx</strong><span class="d">Importé et converti en modèle éditable : votre mise en page sert de point de départ.</span></div>
+                            </li>
+                            <li>
+                                <span class="hero-flow-step">2</span>
+                                <div><strong>Champs déclarés</strong><span class="d">La configuration assistée propose les champs variables ; vous validez ou corrigez.</span></div>
+                            </li>
+                            <li>
+                                <span class="hero-flow-step">3</span>
+                                <div><strong>Saisie par dossier</strong><span class="d">Un formulaire par dossier, des tableaux qui calculent, des données réutilisées d'un document à l'autre.</span></div>
+                            </li>
+                            <li>
+                                <span class="hero-flow-step">4</span>
+                                <div><strong>Validation, PDF, archive</strong><span class="d">La version validée est figée, la facture peut sortir en Factur-X, l'archive du dossier est scellée.</span></div>
+                            </li>
+                        </ol>
+                        <div class="hero-flow-foot">Signature électronique : fonctionnalité prévue, pas encore disponible.</div>
                     </div>
                 </div>
             </div>
@@ -1467,50 +1136,50 @@
                 <div class="text-center fade-in">
                     <span class="section-label">Le constat</span>
                     <h2>Les lettres de mission, c'est votre quotidien.<br>Pas votre passion.</h2>
-                    <p class="section-subtitle">Chaque année, des centaines de LDM à produire. Chaque fois, le même processus laborieux.</p>
+                    <p class="section-subtitle">Chaque année, les mêmes documents à produire. Chaque fois, le même parcours manuel.</p>
                 </div>
                 <div class="problem-grid">
                     <div class="problem-card fade-in">
                         <div class="problem-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                         </div>
-                        <h3>20 à 30 minutes par LDM</h3>
-                        <p>Ouvrir le template, copier-coller, adapter, recalculer dans Excel, vérifier. Pour 200 clients, c'est 60 à 100 heures par an gaspillées.</p>
+                        <h3>Le même document, refait à la main</h3>
+                        <p>Ouvrir le modèle, copier-coller, adapter les montants, recalculer dans un tableur, relire. Le geste se répète à chaque client, chaque année.</p>
                     </div>
                     <div class="problem-card fade-in">
                         <div class="problem-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/><path d="M12 11v6M9 14h6"/></svg>
                         </div>
                         <h3>Fichiers perdus, versions contradictoires</h3>
-                        <p>Des Word éparpillés sur des serveurs partagés ou dans des boîtes mail. Quand un collaborateur part, les fichiers ont disparu.</p>
+                        <p>Des fichiers Word éparpillés sur des serveurs partagés ou dans des boîtes mail. Au départ d'un collaborateur, personne ne sait plus quelle version faisait foi.</p>
                     </div>
                     <div class="problem-card fade-in">
                         <div class="problem-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
                         </div>
                         <h3>Risques de non-conformité</h3>
-                        <p>Clauses manquantes, calculs erronés, archivage non sécurisé. La LDM engage votre responsabilité civile, fiscale, voire pénale.</p>
+                        <p>Une clause oubliée, un calcul faux, un document impossible à retrouver : cela se découvre au pire moment, en cas de litige ou de contrôle.</p>
                     </div>
                     <div class="problem-card fade-in">
                         <div class="problem-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01"/></svg>
                         </div>
-                        <h3>Factur-X obligatoire dans 6 mois</h3>
-                        <p>Facturation électronique B2B obligatoire en septembre 2026. 50 € d'amende par facture non conforme. La majorité des cabinets n'ont pas encore de solution.</p>
+                        <h3>La facture doit devenir structurée</h3>
+                        <p>La facturation électronique entre entreprises impose un format structuré, dont Factur-X fait partie. Le calendrier et les sanctions sont fixés par l'administration fiscale : vérifiez votre échéance sur <a href="https://www.impots.gouv.fr" target="_blank" rel="noopener" style="color:var(--emerald-dark); text-decoration:underline;">impots.gouv.fr</a>.</p>
                     </div>
                     <div class="problem-card fade-in">
                         <div class="problem-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><path d="M8 17h8"/></svg>
                         </div>
                         <h3>Fuite de données au départ d'un collaborateur</h3>
-                        <p>Clé USB, envoi par email. Vos templates perfectionnés pendant des années peuvent être copiés. Aucun contrôle d'accès.</p>
+                        <p>Clé USB, envoi par e-mail : sur un partage de fichiers, vos modèles perfectionnés pendant des années se copient sans laisser de trace.</p>
                     </div>
                     <div class="problem-card fade-in">
                         <div class="problem-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
                         </div>
-                        <h3>Juniors non opérationnels</h3>
-                        <p>6 cabinets sur 10 peinent à recruter. Un junior met des semaines à maîtriser les processus documentaires. Les associés perdent du temps à former.</p>
+                        <h3>Un savoir-faire difficile à transmettre</h3>
+                        <p>Les règles de production d'un document vivent dans la tête de ceux qui les appliquent. Un nouvel arrivant les réapprend, et quelqu'un doit relire derrière lui.</p>
                     </div>
                 </div>
             </div>
@@ -1521,7 +1190,7 @@
             <div class="container">
                 <div class="text-center fade-in">
                     <span class="section-label">Comment ça marche</span>
-                    <h2>De votre modèle Word à une LDM signée<br>en 4 étapes</h2>
+                    <h2>De votre modèle Word au dossier scellé,<br>en 4 étapes</h2>
                 </div>
                 <div class="steps-grid">
                     <div class="step fade-in">
@@ -1529,32 +1198,82 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
                         </div>
                         <span class="step-label">Étape 1</span>
-                        <h3>Uploadez</h3>
-                        <p>Importez votre modèle .docx existant. Vos habitudes sont préservées.</p>
+                        <h3>Importez</h3>
+                        <p>Vous déposez votre modèle .docx. Il est converti en modèle éditable, sans repartir d'une page blanche.</p>
                     </div>
                     <div class="step fade-in fade-in-delay-1">
                         <div class="step-number">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l1.09 3.26L16 6l-2.18 2.18L14.36 12 12 10.18 9.64 12l.54-3.82L8 6l2.91-.74L12 2z"/><path d="M5 19l2-6"/><path d="M19 19l-2-6"/><circle cx="12" cy="19" r="3"/></svg>
                         </div>
                         <span class="step-label">Étape 2</span>
-                        <h3>L'IA déclare</h3>
-                        <p>70 champs variables détectés automatiquement en 3 minutes. Taux de détection : 98 %.</p>
+                        <h3>Configurez</h3>
+                        <p>La configuration assistée repère les endroits qui changent d'un client à l'autre et propose des champs. Vous gardez la main : chaque proposition se valide, se corrige ou se supprime.</p>
                     </div>
                     <div class="step fade-in fade-in-delay-2">
                         <div class="step-number">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
                         </div>
                         <span class="step-label">Étape 3</span>
-                        <h3>Remplissez</h3>
-                        <p>Un formulaire aussi simple qu'un formulaire en ligne. 2 minutes, même pour un junior.</p>
+                        <h3>Saisissez</h3>
+                        <p>Un formulaire par dossier remplace la chasse aux copier-coller. Les tableaux calculent leurs sous-totaux, la TVA et le TTC.</p>
                     </div>
                     <div class="step fade-in fade-in-delay-3">
                         <div class="step-number">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         </div>
                         <span class="step-label">Étape 4</span>
-                        <h3>C'est fait</h3>
-                        <p>Signature électronique, archivage sécurisé, Factur-X généré automatiquement.</p>
+                        <h3>Validez et archivez</h3>
+                        <p>À la validation, la version est figée et numérotée. Le PDF est produit, la facture peut sortir en Factur-X, et l'archive du dossier est scellée avec une empreinte par pièce.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PHILOSOPHIE ========== -->
+        <section class="philosophy" id="philosophie">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <span class="section-label">Notre philosophie</span>
+                    <h2>Sept principes guident chaque écran de Gizedoc</h2>
+                    <p class="section-subtitle">Un outil de cabinet se juge à ce qu'il épargne : le geste inutile, la ressaisie, le doute sur la bonne version.</p>
+                </div>
+                <div class="philosophy-figures">
+                    <div class="philosophy-figure fade-in">
+                        <span class="figure-value">0&nbsp;%</span>
+                        <span class="figure-label">de friction</span>
+                        <p>Vous partez de vos propres modèles Word. Pas de format à apprendre, pas de copier-coller d'un document à l'autre.</p>
+                    </div>
+                    <div class="philosophy-figure fade-in fade-in-delay-1">
+                        <span class="figure-value">100&nbsp;%</span>
+                        <span class="figure-label">d'affordance</span>
+                        <p>Chaque écran montre ce qu'on peut y faire, et chaque bouton dit ce qu'il va faire. Aucun mode d'emploi à consulter.</p>
+                    </div>
+                </div>
+                <div class="principles">
+                    <div class="principle fade-in">
+                        <span class="principle-index">01</span>
+                        <h3>Unicité de la donnée</h3>
+                        <p>Une information se saisit une fois, sur la fiche du client ou du dossier, et alimente tous les documents qui l'utilisent.</p>
+                    </div>
+                    <div class="principle fade-in fade-in-delay-1">
+                        <span class="principle-index">02</span>
+                        <h3>Traçabilité des actions</h3>
+                        <p>Le journal d'audit garde qui a fait quoi, et quand. Un document validé est figé, avec l'empreinte de son PDF.</p>
+                    </div>
+                    <div class="principle fade-in fade-in-delay-2">
+                        <span class="principle-index">03</span>
+                        <h3>Respect du RGPD dès la conception</h3>
+                        <p>Chaque cabinet ne voit que ses données. Les données d'un client s'exportent et s'effacent sur demande.</p>
+                    </div>
+                    <div class="principle fade-in fade-in-delay-3">
+                        <span class="principle-index">04</span>
+                        <h3>Standardisation des documents</h3>
+                        <p>Des modèles communs au cabinet : chaque collaborateur produit la même lettre de mission, à jour, au même format.</p>
+                    </div>
+                    <div class="principle fade-in fade-in-delay-3">
+                        <span class="principle-index">05</span>
+                        <h3>IA sur mesure</h3>
+                        <p>L'IA a un rôle précis : repérer les champs de vos modèles. Elle propose, vous validez ou corrigez.</p>
                     </div>
                 </div>
             </div>
@@ -1565,8 +1284,8 @@
             <div class="container">
                 <div class="text-center fade-in">
                     <span class="section-label">Fonctionnalités</span>
-                    <h2>Tout ce dont votre cabinet a besoin</h2>
-                    <p class="section-subtitle">Une plateforme complète qui couvre le cycle de vie de chaque lettre de mission.</p>
+                    <h2>Ce que Gizedoc fait aujourd'hui</h2>
+                    <p class="section-subtitle">Le cycle de vie d'un document de mission : le modèle, la saisie, la validation, la facture, l'archive. Ce qui n'est pas encore livré est signalé comme tel.</p>
                 </div>
                 <div class="features-grid">
                     <div class="feature-card fade-in">
@@ -1574,8 +1293,8 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l1.09 3.26L16 6l-2.18 2.18L14.36 12 12 10.18 9.64 12l.54-3.82L8 6l2.91-.74L12 2z"/><path d="M2 20h20"/><path d="M6 16h12"/></svg>
                         </div>
                         <div>
-                            <h3>IA intégrée</h3>
-                            <p>Détection automatique des champs variables, pré-remplissage intelligent, vérification de conformité.</p>
+                            <h3>Configuration assistée des modèles</h3>
+                            <p>À l'import d'un .docx, Gizedoc propose les champs variables du modèle. Vous validez, corrigez ou complétez : rien n'est publié sans votre accord.</p>
                         </div>
                     </div>
                     <div class="feature-card fade-in">
@@ -1583,8 +1302,8 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h4"/><path d="M15 17l2 2 4-4"/></svg>
                         </div>
                         <div>
-                            <h3>Formules de calcul</h3>
-                            <p>Tarifs × quantités = sous-totaux, TVA, total TTC. Les tableaux de missions intègrent des formules natives, type tableur.</p>
+                            <h3>Formules dans les tableaux</h3>
+                            <p>Les tableaux de missions calculent leurs sous-totaux, la TVA et le TTC. Références de cellules et plages, comme dans un tableur.</p>
                         </div>
                     </div>
                     <div class="feature-card fade-in">
@@ -1592,8 +1311,17 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
                         </div>
                         <div>
-                            <h3>Factur-X natif et gratuit</h3>
-                            <p>Vos données sont déjà structurées : le format Factur-X est un sous-produit automatique. Zéro coût supplémentaire.</p>
+                            <h3>Factur-X, profil EN 16931</h3>
+                            <p>La facture sort en PDF/A-3 avec le XML de facturation intégré, au profil EN 16931. Gizedoc produit le fichier ; il ne le transmet pas à votre place.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <h3>Version figée à la validation</h3>
+                            <p>Quand un document est validé, sa version est numérotée et son PDF verrouillé par empreinte. Ce qui a été validé ne peut plus changer dans votre dos.</p>
                         </div>
                     </div>
                     <div class="feature-card fade-in">
@@ -1601,8 +1329,8 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><circle cx="12" cy="16" r="1"/></svg>
                         </div>
                         <div>
-                            <h3>Chiffrement natif</h3>
-                            <p>Données chiffrées au repos et en transit. Hébergement sur serveurs en France. Aucun transfert hors UE.</p>
+                            <h3>Archive de dossier scellée</h3>
+                            <p>L'archive rassemble les pièces du dossier dans une ZIP scellée, avec une empreinte SHA-256 par pièce. Une archive scellée ne se réécrit pas.</p>
                         </div>
                     </div>
                     <div class="feature-card fade-in">
@@ -1610,8 +1338,8 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
                         </div>
                         <div>
-                            <h3>Gestion des droits</h3>
-                            <p>Junior saisit, chef de mission valide, associé signe. Aucun collaborateur ne peut exporter les templates ni les données.</p>
+                            <h3>Droits par rôle et cloisonnement</h3>
+                            <p>Une trentaine de permissions fines : qui saisit, qui valide, qui scelle, qui administre. Les données d'un cabinet ne sont pas visibles d'un autre.</p>
                         </div>
                     </div>
                     <div class="feature-card fade-in">
@@ -1619,8 +1347,8 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
                         </div>
                         <div>
-                            <h3>Source unique de vérité</h3>
-                            <p>Toutes les données dans un seul endroit. Plus de fichiers Word contradictoires. Un nouveau collaborateur accède à tout instantanément.</p>
+                            <h3>Historique et comparaison</h3>
+                            <p>Chaque version validée est conservée. Deux versions se comparent à l'écran, les différences sont mises en évidence.</p>
                         </div>
                     </div>
                     <div class="feature-card fade-in">
@@ -1628,8 +1356,8 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 10h8M8 14h4"/></svg>
                         </div>
                         <div>
-                            <h3>Messagerie par dossier</h3>
-                            <p>Chaque dossier a son fil de discussion intégré. Notifications email couplées. Fini les échanges non traçables.</p>
+                            <h3>Commentaires par dossier</h3>
+                            <p>Un fil de discussion attaché aux dossiers et documents, avec notifications par e-mail : affectation, mention, dossier complet, dossier archivé.</p>
                         </div>
                     </div>
                     <div class="feature-card fade-in">
@@ -1637,242 +1365,212 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg>
                         </div>
                         <div>
-                            <h3>Logs d'audit complets</h3>
-                            <p>Qui a fait quoi, quand, sur quel dossier. Preuves juridiques pour les contrôles de l'Ordre et les audits internes.</p>
+                            <h3>Journal d'audit</h3>
+                            <p>Qui a fait quoi, quand, depuis quelle adresse. Consultable par les administrateurs du cabinet, et purgeable.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <div>
+                            <h3>Checklist de conformité des lettres de mission</h3>
+                            <p>Un jeu de règles vérifie les mentions attendues d'une lettre de mission et signale ce qui manque. Ces règles sont déterministes : elles n'utilisent pas d'IA.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <div>
+                            <h3>Recherche d'entreprise</h3>
+                            <p>La fiche client se pré-remplit depuis l'API publique recherche-entreprises (données Sirene et Registre national des entreprises).</p>
+                        </div>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                        </div>
+                        <div>
+                            <h3>Signature électronique <span class="tag-soon">Prévu</span></h3>
+                            <p>Envoyer un document validé à la signature est une fonctionnalité prévue. Elle n'est pas disponible aujourd'hui et n'est promise à aucune date.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========== TESTIMONIALS ========== -->
-        <section class="testimonials" id="temoignages">
+        <!-- ========== ÉTAT DU PRODUIT ========== -->
+        <section class="status" id="etat">
             <div class="container">
                 <div class="text-center fade-in">
-                    <span class="section-label">Retours terrain</span>
-                    <h2>Ce qu'en disent les cabinets</h2>
-                    <p class="section-subtitle">Des experts-comptables qui ont adopté Gizé pour simplifier leur quotidien.</p>
+                    <span class="section-label">Transparence</span>
+                    <h2>Où en est Gizedoc</h2>
+                    <p class="section-subtitle">Gizedoc est en pré-pilote : aucun cabinet ne l'utilise encore en production. Nous cherchons un ou deux cabinets pour l'éprouver sur des dossiers réels. Voilà l'état exact du produit.</p>
                 </div>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card fade-in">
-                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <div class="testimonial-quote">"On a divisé par 10 le temps de production de nos LDM. Un junior produit un document parfait dès son premier jour. C'est exactement ce qu'il nous manquait."</div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">SB</div>
-                            <div>
-                                <div class="testimonial-name">Sophie Beaumont</div>
-                                <div class="testimonial-role">Associée — Cabinet Beaumont & Fils, Lyon</div>
-                            </div>
-                        </div>
+                <div class="status-grid">
+                    <div class="status-card now fade-in">
+                        <h3>Disponible aujourd'hui</h3>
+                        <ul>
+                            <li>Import de modèles Word et configuration assistée des champs</li>
+                            <li>Saisie par dossier, tableaux avec formules</li>
+                            <li>Validation qui fige la version, historique et comparaison</li>
+                            <li>PDF, et facture Factur-X au profil EN 16931</li>
+                            <li>Clients, dossiers, droits par rôle, journal d'audit</li>
+                            <li>Checklist de conformité des lettres de mission</li>
+                            <li>Archive de dossier scellée, export et effacement RGPD</li>
+                        </ul>
                     </div>
-                    <div class="testimonial-card fade-in fade-in-delay-1">
-                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <div class="testimonial-quote">"Le Factur-X gratuit nous a fait venir, mais c'est le gain de temps qui nous a fait rester. 200 dossiers traités en une fraction du temps habituel."</div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">MR</div>
-                            <div>
-                                <div class="testimonial-name">Marc Rousseau</div>
-                                <div class="testimonial-role">Directeur de mission — ExpertCo, Bordeaux</div>
-                            </div>
-                        </div>
+                    <div class="status-card fade-in fade-in-delay-1">
+                        <h3>Prévu, non livré</h3>
+                        <ul>
+                            <li>Signature électronique d'un document validé</li>
+                            <li>Chiffrement des données au repos</li>
+                            <li>Reprise des données clients existantes</li>
+                            <li>Analyse de conformité assistée par IA : le code existe, mais l'option reste désactivée tant qu'un fournisseur européen n'est pas configuré</li>
+                        </ul>
                     </div>
-                    <div class="testimonial-card fade-in fade-in-delay-2">
-                        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                        <div class="testimonial-quote">"La sécurité et la traçabilité nous ont convaincus. Chaque modification est tracée, les templates sont protégés. L'Ordre peut contrôler, on est sereins."</div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">CL</div>
-                            <div>
-                                <div class="testimonial-name">Claire Lemaire</div>
-                                <div class="testimonial-role">Expert-comptable — Cabinet Lemaire, Nantes</div>
-                            </div>
-                        </div>
+                    <div class="status-card fade-in fade-in-delay-2">
+                        <h3>Ce que Gizedoc n'est pas</h3>
+                        <ul>
+                            <li>Ni un logiciel de production comptable : Gizedoc s'ajoute au vôtre, il ne le remplace pas</li>
+                            <li>Ni une plateforme agréée de facturation électronique : Gizedoc produit le fichier, il ne le transmet pas</li>
+                            <li>Ni un outil connecté à vos logiciels existants : aucun connecteur n'est livré à ce jour</li>
+                            <li>Ni un produit avec des références clients : nous n'en avons aucune, et nous n'en inventerons pas</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========== INTEGRATIONS ========== -->
-        <section class="integrations">
-            <div class="container">
-                <div class="integrations-label fade-in">Compatible avec vos outils existants</div>
-                <div class="integrations-grid fade-in">
-                    <div class="integration-item">
-                        <div class="integration-icon" style="background: #1E3A5F;">C</div>
-                        Cegid
-                    </div>
-                    <div class="integration-item">
-                        <div class="integration-icon" style="background: #E84E0F;">A</div>
-                        ACD
-                    </div>
-                    <div class="integration-item">
-                        <div class="integration-icon" style="background: #00B140;">S</div>
-                        Sage
-                    </div>
-                    <div class="integration-item">
-                        <div class="integration-icon" style="background: #5B4FDB;">Y</div>
-                        Yousign
-                    </div>
-                    <div class="integration-item">
-                        <div class="integration-icon" style="background: #0063CB;">API</div>
-                        INSEE / SIRENE
-                    </div>
-                    <div class="integration-item">
-                        <div class="integration-icon" style="background: #374151;">P</div>
-                        Pappers
-                    </div>
-                    <div class="integration-item">
-                        <div class="integration-icon" style="background: #DC2626;">PDF</div>
-                        Factur-X
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== COMPETITIVE TABLE ========== -->
-        <section class="competitive" id="comparatif">
+        <!-- ========== CAPACITÉS ========== -->
+        <section class="competitive" id="capacites">
             <div class="container">
                 <div class="text-center fade-in">
-                    <span class="section-label">Pourquoi Gizé</span>
-                    <h2>Gizé face à la concurrence</h2>
-                    <p class="section-subtitle">Un seul outil qui coche toutes les cases. Comparez par vous-même.</p>
+                    <span class="section-label">Capacités</span>
+                    <h2>Ce qui est livré, ce qui ne l'est pas</h2>
+                    <p class="section-subtitle">Le tableau décrit le produit tel qu'il fonctionne aujourd'hui. Nous ne publions pas de comparaison avec d'autres logiciels : nous n'avons pas de mesure à opposer aux leurs.</p>
                 </div>
                 <div class="competitive-wrapper fade-in">
-                    <table class="competitive-table">
+                    <table class="competitive-table capabilities">
+                        <caption class="sr-only">Capacités de Gizedoc et leur état d'avancement</caption>
                         <thead>
                             <tr>
-                                <th>Critère</th>
-                                <th>RCA</th>
-                                <th>Kanta</th>
-                                <th>Queoval</th>
-                                <th>Docxtemplater</th>
-                                <th class="col-gize">Gizé</th>
+                                <th scope="col">Capacité</th>
+                                <th scope="col">Ce que fait Gizedoc</th>
+                                <th scope="col" class="col-gize">État</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Setup d'un template</td>
-                                <td>Manuel</td>
-                                <td>Manuel</td>
-                                <td>Manuel</td>
-                                <td>Code développeur</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> IA auto (98 %, 3 min)</td>
+                                <td>Import de modèles Word</td>
+                                <td>Le .docx est importé et converti en modèle éditable.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
-                                <td>Temps par LDM</td>
-                                <td>15-20 min</td>
-                                <td>10-15 min</td>
-                                <td>10-15 min</td>
-                                <td>N/A (dev)</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> 2 min (formulaire)</td>
+                                <td>Configuration des champs</td>
+                                <td>Les champs variables sont proposés automatiquement, puis validés par vous.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
-                                <td>Formules dynamiques</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-partial">~ Limité</td>
-                                <td class="ct-partial">~ Basique</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Natives, type tableur</td>
+                                <td>Saisie par dossier</td>
+                                <td>Un formulaire par dossier ; les données saisies servent à tous ses documents.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
-                                <td>Factur-X</td>
-                                <td class="ct-no">&#10005; Non inclus</td>
-                                <td class="ct-no">&#10005; Non inclus</td>
-                                <td class="ct-no">&#10005; Non inclus</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Gratuit, natif</td>
+                                <td>Calculs dans les tableaux</td>
+                                <td>Formules de type tableur : références de cellules, plages, sommes, HT / TVA / TTC.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
-                                <td>Chiffrement données</td>
-                                <td class="ct-partial">~ Variable</td>
-                                <td class="ct-yes">&#10003; Oui</td>
-                                <td class="ct-partial">~ Variable</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Natif, hébergé France</td>
+                                <td>Génération du PDF</td>
+                                <td>Le document est rendu en PDF depuis la plateforme.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
-                                <td>Gestion des droits</td>
-                                <td class="ct-partial">~ Basique</td>
-                                <td class="ct-yes">&#10003; Oui</td>
-                                <td class="ct-yes">&#10003; Oui</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Granulaire par rôle</td>
+                                <td>Facture Factur-X</td>
+                                <td>PDF/A-3 avec XML de facturation intégré, profil EN 16931.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
-                                <td>Historique versions</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Natif (diff visuel)</td>
+                                <td>Validation d'un document</td>
+                                <td>La validation fige la version, la numérote et verrouille le PDF par empreinte.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Historique des versions</td>
+                                <td>Versions conservées et comparables à l'écran, différences mises en évidence.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Archive de dossier</td>
+                                <td>Archive ZIP scellée, empreinte SHA-256 par pièce ; une archive scellée ne se réécrit pas.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Droits et rôles</td>
+                                <td>Une trentaine de permissions fines, attribuées par rôle.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Cloisonnement des cabinets</td>
+                                <td>Les données d'un cabinet ne sont pas accessibles depuis un autre.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Commentaires et notifications</td>
+                                <td>Fil de discussion par dossier et par document, notifications par e-mail.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Journal d'audit</td>
+                                <td>Enregistrement des actions : auteur, nature, date, origine.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Conformité des lettres de mission</td>
+                                <td>Jeu de règles déterministes qui signale les mentions manquantes.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Recherche d'entreprise</td>
+                                <td>Pré-remplissage depuis l'API publique recherche-entreprises (Sirene, RNE).</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Export et effacement RGPD</td>
+                                <td>Export des données d'un client ou d'un utilisateur, anonymisation, demande d'effacement.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
+                            </tr>
+                            <tr>
+                                <td>Analyse de conformité par IA</td>
+                                <td>Désactivée par défaut ; activable si un fournisseur européen est configuré sur l'instance.</td>
+                                <td><span class="ct-state study">Option</span></td>
                             </tr>
                             <tr>
                                 <td>Signature électronique</td>
-                                <td>Via tiers</td>
-                                <td>Via JesignExpert</td>
-                                <td>Via tiers</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Native</td>
+                                <td>Envoi d'un document validé à la signature.</td>
+                                <td><span class="ct-state soon">Prévu</span></td>
                             </tr>
                             <tr>
-                                <td>Enrichissement données</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td>SIRET → INPI</td>
-                                <td class="ct-partial">~ Limité</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> APIs publiques + tierces</td>
+                                <td>Chiffrement au repos</td>
+                                <td>Chiffrement des documents stockés ; spécification écrite, mise en œuvre à venir.</td>
+                                <td><span class="ct-state soon">Prévu</span></td>
                             </tr>
                             <tr>
-                                <td>Messagerie par dossier</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Intégrée + notifications</td>
+                                <td>Reprise des données clients</td>
+                                <td>Import de vos clients existants par fichier ou par interface.</td>
+                                <td><span class="ct-state study">À l'étude</span></td>
                             </tr>
                             <tr>
-                                <td>Logs d'audit</td>
-                                <td class="ct-partial">~ Basique</td>
-                                <td class="ct-partial">~ Basique</td>
-                                <td class="ct-partial">~ Basique</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Complets</td>
-                            </tr>
-                            <tr>
-                                <td>Onboarding</td>
-                                <td>Jours</td>
-                                <td>Heures</td>
-                                <td>Jours</td>
-                                <td>Semaines (dev)</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> &lt; 1 heure</td>
-                            </tr>
-                            <tr>
-                                <td>Prérequis</td>
-                                <td>Windows + install</td>
-                                <td>Navigateur</td>
-                                <td>Installation</td>
-                                <td>Développeur JS</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Navigateur, c'est tout</td>
-                            </tr>
-                            <tr>
-                                <td>IA vérification / veille</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="ct-no">&#10005; Non</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> Roadmap intégrée</td>
-                            </tr>
-                            <tr>
-                                <td>Prix</td>
-                                <td>Suite complète</td>
-                                <td>~49-99 €/mois</td>
-                                <td>Suite complète</td>
-                                <td>1 250-3 000 €/an</td>
-                                <td class="col-gize"><span class="ct-yes">&#10003;</span> 29 € + 12 €/user — dossiers illimités</td>
+                                <td>Connecteurs logiciels</td>
+                                <td>Échange automatique avec un logiciel de production comptable.</td>
+                                <td><span class="ct-state study">À l'étude</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="competitive-note fade-in">Colonne Gizé : fonctionnalités core disponibles ou en roadmap identifiée.</p>
+                <p class="competitive-note fade-in">« Prévu » signifie : décidé, non développé, sans date annoncée. « À l'étude » signifie : pas encore décidé.</p>
             </div>
         </section>
 
@@ -1881,14 +1579,14 @@
             <div class="container">
                 <div class="text-center fade-in">
                     <span class="section-label">La différence</span>
-                    <h2>Avant Gizé vs. Avec Gizé</h2>
+                    <h2>Sans Gizedoc, avec Gizedoc</h2>
                 </div>
                 <div class="comparison-grid fade-in">
                     <div class="comparison-col before">
-                        <div class="comparison-col-title">Avant</div>
+                        <div class="comparison-col-title">Sans Gizedoc</div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                            20 à 30 minutes par lettre de mission
+                            Le même document refait à la main, client après client
                         </div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -1900,22 +1598,22 @@
                         </div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                            Aucune traçabilité des modifications
+                            Un modèle qui dérive : chacun part de la copie qu'il a sous la main
                         </div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                            Signature par email et relances
+                            Pas de trace de ce qui a été validé, ni par qui
                         </div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                            Factur-X : pas de solution en vue
+                            Facture à ressaisir dans un autre outil pour la mettre au format structuré
                         </div>
                     </div>
                     <div class="comparison-col after">
-                        <div class="comparison-col-title">Avec Gizé</div>
+                        <div class="comparison-col-title">Avec Gizedoc</div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            2 minutes par LDM, formulaire guidé
+                            Une saisie par dossier, puis le document se remplit
                         </div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1927,20 +1625,17 @@
                         </div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            Historique complet, preuves juridiques
+                            Historique des versions conservé, modifications comparables
                         </div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            Signature en un clic depuis le navigateur
+                            Version figée à la validation, archive du dossier scellée
                         </div>
                         <div class="comparison-item">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            Factur-X inclus, généré automatiquement
+                            Facture produite au format Factur-X, profil EN 16931
                         </div>
                     </div>
-                </div>
-                <div class="comparison-stat fade-in">
-                    <p>200 clients × 20 min économisées = <strong>60+ heures/an récupérées</strong></p>
                 </div>
             </div>
         </section>
@@ -1949,26 +1644,32 @@
         <section class="facturx" id="facturx">
             <div class="container">
                 <div class="text-center fade-in">
-                    <span class="section-label">Conformité</span>
-                    <h2>Factur-X : inclus. Gratuit.</h2>
+                    <span class="section-label">Facturation électronique</span>
+                    <h2>Vos factures, au format structuré</h2>
                 </div>
-                <div class="facturx-date fade-in">1er septembre 2026</div>
-                <p class="facturx-desc fade-in">La facturation électronique B2B devient obligatoire. Toutes les entreprises devront recevoir des factures au format structuré. Les amendes sont réelles. Votre solution est déjà prête.</p>
+                <div class="facturx-date fade-in">EN 16931</div>
+                <p class="facturx-desc fade-in">Les données de vos documents sont déjà déclarées et typées dans Gizedoc. La facture peut donc sortir directement en Factur-X : un PDF/A-3 lisible par un humain, qui embarque le XML de facturation lisible par une machine, au profil européen EN 16931.</p>
                 <div class="facturx-compare fade-in">
-                    <div class="facturx-card sans">
-                        <div class="price-label">Sans solution</div>
-                        <div class="price">50 €</div>
-                        <div class="price-desc">d'amende par facture non conforme<br>500 € par transmission manquante</div>
-                    </div>
                     <div class="facturx-card avec">
-                        <div class="price-label">Avec Gizé</div>
-                        <div class="price">0 €</div>
-                        <div class="price-desc">Vos données sont déjà structurées.<br>Factur-X est un sous-produit naturel.</div>
+                        <div class="price-label">Ce que Gizedoc fait</div>
+                        <ul class="facturx-list">
+                            <li>Produit le PDF/A-3 avec le XML de facturation intégré</li>
+                            <li>Applique le profil EN 16931, et non un profil réduit</li>
+                            <li>Reprend les montants calculés dans le document, sans ressaisie</li>
+                            <li>Vous laisse le fichier : vous le transmettez par votre canal habituel</li>
+                        </ul>
+                    </div>
+                    <div class="facturx-card sans">
+                        <div class="price-label">Ce que Gizedoc n'est pas</div>
+                        <ul class="facturx-list">
+                            <li>Ni une plateforme agréée, ni un opérateur de transmission</li>
+                            <li>Ne dépose, ne transmet et ne reçoit aucune facture à votre place</li>
+                            <li>Ne se substitue pas à votre obligation déclarative</li>
+                            <li>Ne vous dispense pas de vérifier votre échéance officielle</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="facturx-bottom fade-in">
-                    <p>Puisque chaque champ de vos documents est déclaré et typé dans Gizé, la génération Factur-X est automatique. Aucune saisie supplémentaire, aucun logiciel tiers, aucun coût additionnel.</p>
-                </div>
+                <p class="facturx-source fade-in">Calendrier, obligations et sanctions sont fixés par l'administration fiscale : <a href="https://www.impots.gouv.fr" target="_blank" rel="noopener">impots.gouv.fr</a>.</p>
             </div>
         </section>
 
@@ -1977,51 +1678,51 @@
             <div class="container">
                 <div class="text-center fade-in">
                     <span class="section-label">Sécurité</span>
-                    <h2>La sécurité de vos données, par conception</h2>
-                    <p class="section-subtitle">Pas un ajout après coup. La sécurité est intégrée dans chaque couche de Gizé.</p>
+                    <h2>Ce qui protège vos données, et ce qui manque encore</h2>
+                    <p class="section-subtitle">Nous préférons décrire les mécanismes réellement en place plutôt que des labels. Ce qui n'est pas fait est dit ici aussi.</p>
                 </div>
                 <div class="security-grid">
                     <div class="security-card fade-in">
                         <div class="security-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
                         </div>
-                        <h3>Chiffrement de bout en bout</h3>
-                        <p>Données chiffrées au repos (AES-256) et en transit (TLS 1.3). Même nous ne lisons pas vos documents.</p>
+                        <h3>Cloisonnement par cabinet</h3>
+                        <p>Chaque requête est bornée au cabinet du compte connecté. Les jeux de tests vérifient qu'un cabinet ne voit pas les données d'un autre.</p>
                     </div>
                     <div class="security-card fade-in fade-in-delay-1">
                         <div class="security-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
                         </div>
-                        <h3>Hébergement France</h3>
-                        <p>Serveurs en France, conformité RGPD native. Pas de transfert hors UE, pas de Cloud Act américain.</p>
+                        <h3>Droits par rôle</h3>
+                        <p>Une trentaine de permissions distinctes : consulter, saisir, valider, sceller, administrer. Les permissions sont vérifiées côté serveur, pas seulement masquées à l'écran.</p>
                     </div>
                     <div class="security-card fade-in fade-in-delay-2">
                         <div class="security-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></svg>
                         </div>
-                        <h3>Droits granulaires</h3>
-                        <p>Qui peut voir, modifier, valider, signer. Aucun export sauvage. Protection de votre propriété intellectuelle.</p>
+                        <h3>Traçabilité</h3>
+                        <p>Le journal d'audit enregistre l'auteur, l'action, la date et l'origine. La validation d'un document fige sa version et l'empreinte de son PDF.</p>
                     </div>
                     <div class="security-card fade-in fade-in-delay-3">
                         <div class="security-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><circle cx="12" cy="16" r="1"/></svg>
                         </div>
-                        <h3>Historique et audit</h3>
-                        <p>Chaque action tracée : connexion, modification, signature. Preuves juridiques pour les contrôles de l'Ordre.</p>
+                        <h3>Session et contenus</h3>
+                        <p>Le jeton d'authentification reste dans un cookie inaccessible aux scripts de la page. Le contenu importé depuis Word est nettoyé avant d'être affiché.</p>
                     </div>
                 </div>
                 <div class="security-badges fade-in">
                     <div class="security-badge">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                        Conforme RGPD
+                        Export et effacement des données d'un client
                     </div>
                     <div class="security-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                        Hébergé en France
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+                        Chiffrement au repos : prévu, non livré
                     </div>
                     <div class="security-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                        Chiffrement AES-256
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+                        Hébergement du pilote : à définir avec le cabinet
                     </div>
                 </div>
             </div>
@@ -2031,27 +1732,25 @@
         <section class="team" id="equipe">
             <div class="container">
                 <div class="text-center fade-in">
-                    <span class="section-label">Qui sommes-nous</span>
-                    <h2>Conçu par quelqu'un qui connaît votre métier</h2>
+                    <span class="section-label">Qui édite Gizedoc</span>
+                    <h2>Un éditeur, joignable directement</h2>
                 </div>
                 <div class="team-content fade-in">
                     <div class="team-avatar-wrapper">
-                        <!-- Remplacer par une vraie photo : <img src="photo-jc.jpg" alt="..." class="team-avatar" style="object-fit:cover;"> -->
                         <div class="team-avatar">JC</div>
                     </div>
                     <div class="team-info">
                         <h3>Jean-Christophe Feydel</h3>
-                        <div class="team-role">Fondateur de Gizé</div>
-                        <p class="team-bio">Ingénieur logiciel avec une expertise dans la digitalisation des processus documentaires. Gizé est né d'un constat simple : les cabinets comptables méritent des outils aussi modernes que ceux qu'utilisent leurs clients. Chaque fonctionnalité a été pensée avec des experts-comptables, pour des experts-comptables.</p>
+                        <div class="team-role">Éditeur de Gizedoc — entreprise individuelle</div>
+                        <p class="team-bio">Gizedoc est développé et édité par Jean-Christophe Feydel, entrepreneur individuel immatriculé au Registre national des entreprises sous le SIREN 932 484 678, activité de programmation informatique (APE 62.01Z), à Clermont-Ferrand. Il n'y a pas de service commercial intermédiaire : la personne qui écrit le produit est celle qui vous répond.</p>
                         <div class="team-links">
-                            <a href="mailto:contact@gize.fr">
+                            <a href="mailto:jcfeydel@gizedoc.com">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
-                                contact@gize.fr
+                                jcfeydel@gizedoc.com
                             </a>
-                            <!-- Remplacer # par l'URL LinkedIn réelle -->
-                            <a href="#">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                                LinkedIn
+                            <a href="mentions-legales.html">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                Mentions légales
                             </a>
                         </div>
                     </div>
@@ -2064,78 +1763,23 @@
             <div class="container">
                 <div class="text-center fade-in">
                     <span class="section-label">Tarifs</span>
-                    <h2>Un tarif simple et transparent</h2>
-                    <p class="section-subtitle">Pas de surprise. Un modèle qui scale avec la taille de votre cabinet.</p>
-                </div>
-                <div class="pricing-grid fade-in" style="grid-template-columns: 1fr 1fr; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    <div class="pricing-card">
-                        <div class="pricing-label">Plateforme</div>
-                        <div class="pricing-amount">29<span>€</span></div>
-                        <div class="pricing-period">HT / mois</div>
-                        <div class="pricing-desc">Toutes les fonctionnalités incluses : IA, formules, Factur-X, chiffrement, signature, versioning, messagerie, audit. Dossiers illimités.</div>
-                    </div>
-                    <div class="pricing-card" style="border-color: var(--emerald);">
-                        <div class="pricing-label">Par collaborateur</div>
-                        <div class="pricing-amount">+12<span>€</span></div>
-                        <div class="pricing-period">HT / mois / utilisateur</div>
-                        <div class="pricing-desc">Chaque membre de l'équipe. Droits par rôle : junior saisit, chef de mission valide, associé signe.</div>
-                    </div>
+                    <h2>Pas de grille tarifaire publiée</h2>
+                    <p class="section-subtitle">Gizedoc est en pré-pilote. Publier un prix aujourd'hui reviendrait à annoncer un chiffre que rien ne soutient.</p>
                 </div>
                 <div class="pricing-example fade-in">
-                    <div class="pricing-example-label">Exemple concret</div>
-                    <p>Cabinet de 6 collaborateurs, 200 dossiers</p>
-                    <strong>101 € HT / mois</strong>
-                    <p>soit 1 212 € / an — rentabilisé dès le premier mois</p>
-                </div>
-                <div class="pricing-free fade-in">
-                    <p>Plan gratuit — 1 utilisateur, 5 dossiers, toutes les fonctionnalités, sans engagement</p>
-                    <span>Pas un essai de 14 jours. Un plan permanent pour découvrir Gizé à votre rythme.</span>
+                    <div class="pricing-example-label">Pendant le pilote</div>
+                    <p>La tarification est communiquée sur demande et discutée avec chaque cabinet pilote, en fonction du périmètre retenu.</p>
+                    <p>Écrivez-nous : nous répondons avec les conditions exactes, par écrit, sans engagement de votre part.</p>
+                    <div class="contact-actions" style="justify-content:center; margin-top:20px;">
+                        <a class="btn-primary btn-mail" href="mailto:jcfeydel@gizedoc.com?subject=Gizedoc%20%E2%80%94%20conditions%20du%20pilote">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+                            Demander les conditions
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========== ROI ========== -->
-        <section class="roi" id="roi">
-            <div class="container">
-                <div class="text-center fade-in">
-                    <span class="section-label">Retour sur investissement</span>
-                    <h2>Calculez votre gain</h2>
-                    <p class="section-subtitle">Moins de temps perdu à chercher un fichier, une information, un interlocuteur. Plus de temps pour le conseil.</p>
-                </div>
-                <div class="roi-calc fade-in" id="roiCalc">
-                    <div class="roi-calc-title">Estimez vos économies en 10 secondes</div>
-                    <div class="roi-calc-inputs">
-                        <div class="roi-calc-field">
-                            <label for="roiUsers">Collaborateurs dans votre cabinet</label>
-                            <input type="range" id="roiUsers" min="1" max="30" value="6">
-                            <div class="roi-calc-value"><span id="roiUsersVal">6</span> personnes</div>
-                        </div>
-                        <div class="roi-calc-field">
-                            <label for="roiClients">Clients / dossiers actifs par an</label>
-                            <input type="range" id="roiClients" min="10" max="800" value="200" step="10">
-                            <div class="roi-calc-value"><span id="roiClientsVal">200</span> dossiers</div>
-                        </div>
-                    </div>
-                    <div class="roi-calc-results">
-                        <div class="roi-calc-stat">
-                            <div class="roi-calc-stat-value" id="roiHours">60h+</div>
-                            <div class="roi-calc-stat-label">heures récupérées par an</div>
-                        </div>
-                        <div class="roi-calc-stat">
-                            <div class="roi-calc-stat-value" id="roiGain">2 400 €</div>
-                            <div class="roi-calc-stat-label">économisés en coût collaborateur</div>
-                        </div>
-                        <div class="roi-calc-stat">
-                            <div class="roi-calc-stat-value" id="roiMonths">&lt; 5 mois</div>
-                            <div class="roi-calc-stat-label">pour rentabiliser l'abonnement</div>
-                        </div>
-                    </div>
-                    <div class="roi-calc-cost" id="roiCost">
-                        Abonnement Gizé : 244 € HT / mois — soit 2 928 € / an
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- ========== FAQ ========== -->
         <section class="faq" id="faq">
@@ -2146,53 +1790,60 @@
                 </div>
                 <div class="faq-list fade-in">
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false">
                             Puis-je importer mes modèles Word existants ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Oui. Vous uploadez vos fichiers .docx existants et Gizé les convertit en HTML avec 99 % de fidélité. Vos habitudes sont préservées — aucun besoin de repartir de zéro.</p></div>
+                        <div class="faq-answer"><p>Oui. Vous déposez vos fichiers .docx et Gizedoc les convertit en modèles éditables. La conversion vise à reproduire fidèlement votre mise en forme, mais elle n'est pas parfaite : certains modèles demandent des retouches après import. C'est précisément ce qu'un pilote sert à mesurer sur vos propres documents.</p></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
-                            Comment fonctionne la détection IA des variables ?
+                        <button class="faq-question" aria-expanded="false">
+                            Comment la configuration assistée fonctionne-t-elle ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>L'IA analyse votre document et détecte automatiquement les champs variables (nom client, SIRET, missions, honoraires, dates...). Taux de détection : 98 %. Vous validez ou corrigez en quelques clics. Un template de 70 variables est configuré en 3 minutes.</p></div>
+                        <div class="faq-answer"><p>À l'import, une analyse automatique repère les passages qui changent d'un client à l'autre et propose des champs : nom, identifiants, missions, montants, dates. Ces propositions sont soumises à votre validation, une par une. Nous ne publions pas de taux de détection : nous n'avons pas de mesure indépendante à présenter.</p></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
-                            Mes données sont-elles vraiment hébergées en France ?
+                        <button class="faq-question" aria-expanded="false">
+                            Mes documents sont-ils envoyés à un service d'intelligence artificielle ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Oui. Toutes les données (clients, dossiers, documents) sont hébergées sur des serveurs en France, chiffrées au repos (AES-256) et en transit (TLS 1.3). Aucun transfert hors UE. Aucune soumission au Cloud Act.</p></div>
+                        <div class="faq-answer"><p>Pour la configuration assistée, le contenu du modèle est envoyé au fournisseur d'IA configuré pour l'instance. Le fournisseur, son pays d'hébergement et le périmètre exact des données envoyées font partie des points arrêtés par écrit avant tout pilote. L'analyse de conformité assistée par IA, elle, est désactivée par défaut. La checklist de conformité des lettres de mission n'utilise aucune IA : ce sont des règles écrites.</p></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
-                            Gizé est-il compatible avec mon logiciel de production comptable ?
+                        <button class="faq-question" aria-expanded="false">
+                            Où seront hébergées mes données ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Gizé fonctionne en complément de votre outil de production (Cegid, ACD, Sage, etc.). Il ne le remplace pas — il gère le cycle de vie de vos documents : templates, saisie, validation, signature, archivage. L'import de données clients se fait par API ou CSV.</p></div>
+                        <div class="faq-answer"><p>Gizedoc n'est pas encore exploité en production, donc aucun hébergement n'est en service à ce jour. L'hébergement du pilote, son pays et le sous-traitant retenu sont définis avec le cabinet pilote et inscrits au contrat. Nous ne revendiquons aucune certification.</p></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
-                            Comment fonctionne Factur-X concrètement ?
+                        <button class="faq-question" aria-expanded="false">
+                            Gizedoc remplace-t-il mon logiciel de production comptable ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Vos données sont déjà structurées dans Gizé (champs typés, montants calculés). La génération Factur-X (PDF/A-3 + XML CII intégré) est automatique. Aucune saisie supplémentaire, aucun logiciel tiers, aucun coût additionnel.</p></div>
+                        <div class="faq-answer"><p>Non. Gizedoc s'occupe du cycle de vie de vos documents : modèles, saisie, validation, facture au format structuré, archivage. Il ne tient pas votre comptabilité. Aucun connecteur automatique avec un logiciel de production n'est livré aujourd'hui ; la reprise de données existantes est à l'étude.</p></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
-                            L'essai gratuit est-il vraiment sans engagement ?
+                        <button class="faq-question" aria-expanded="false">
+                            Que vaut exactement la conformité Factur-X ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Ce n'est pas un essai de 14 jours — c'est un plan gratuit permanent. 1 utilisateur, 3 dossiers, toutes les fonctionnalités. Sans carte bancaire. Vous passez au plan payant quand vous êtes prêt.</p></div>
+                        <div class="faq-answer"><p>Gizedoc produit une facture au format Factur-X, profil EN 16931 : un PDF/A-3 qui embarque le XML de facturation. Ce que Gizedoc ne fait pas : transmettre la facture. Il n'est ni plateforme agréée, ni opérateur de transmission, et ne se substitue à aucune de vos obligations déclaratives.</p></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-question">
-                            Que se passe-t-il si je résilie ?
+                        <button class="faq-question" aria-expanded="false">
+                            Puis-je signer électroniquement un document depuis Gizedoc ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Vous pouvez exporter toutes vos données et documents à tout moment. Aucun engagement minimum. Résiliation en un clic depuis votre espace. Vos données sont supprimées sous 30 jours, conformément au RGPD.</p></div>
+                        <div class="faq-answer"><p>Pas aujourd'hui. La signature électronique est une fonctionnalité prévue, elle n'est pas développée et nous n'annonçons ni date, ni prestataire. Tant qu'elle n'existe pas, un document validé s'imprime ou se transmet comme vous le faites actuellement.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Que se passe-t-il pour mes données si nous arrêtons ?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </button>
+                        <div class="faq-answer"><p>L'export des données d'un client ou d'un utilisateur, leur anonymisation et l'enregistrement d'une demande d'effacement sont disponibles dans le produit. Les délais de conservation et de suppression applicables au pilote sont fixés par écrit dans le contrat, plutôt qu'annoncés ici.</p></div>
                     </div>
                 </div>
             </div>
@@ -2202,38 +1853,16 @@
         <section class="cta-final" id="contact">
             <div class="container">
                 <div class="fade-in">
-                    <span class="section-label">Commencer</span>
-                    <h2>Prêt à rendre vos lettres de mission intelligentes ?</h2>
-                    <p class="section-subtitle">Demandez une démo personnalisée. Nous vous montrons Gizé avec vos propres documents.</p>
-
-                    <!-- Option 1 : Formulaire email (actif par défaut) -->
-                    <form class="email-form" id="ctaForm">
-                        <input type="email" placeholder="votre@email.fr" required aria-label="Adresse email">
-                        <button type="submit" class="btn-primary">Demander une démo</button>
-                    </form>
-                    <div class="form-success" id="ctaSuccess">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 6L9 17l-5-5"/></svg>
-                        Merci ! Nous vous contacterons rapidement.
-                    </div>
-
-                    <!-- Option 2 : Booking direct (décommenter et remplacer l'URL Cal.com) -->
-                    <!--
-                    <div style="margin: 32px auto 0; max-width: 480px;">
-                        <a href="https://cal.com/VOTRE-LIEN/demo-gize-15min" target="_blank" rel="noopener"
-                           class="btn-primary" style="display: flex; width: 100%; justify-content: center; gap: 10px; padding: 18px 36px; font-size: 1.1rem;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-                            Réserver un créneau de 15 min
+                    <span class="section-label">Nous écrire</span>
+                    <h2>Envie de voir Gizedoc sur vos propres documents ?</h2>
+                    <p class="section-subtitle">Envoyez un message : nous convenons d'une démonstration, si possible à partir d'un de vos modèles. Vous verrez ce que l'outil fait, et ce qu'il ne fait pas.</p>
+                    <div class="contact-actions" style="margin-top:36px;">
+                        <a class="btn-primary btn-mail" href="mailto:jcfeydel@gizedoc.com?subject=Gizedoc%20%E2%80%94%20demande%20de%20d%C3%A9monstration">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+                            Écrire à jcfeydel@gizedoc.com
                         </a>
-                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 14px;">Gratuit, sans engagement. Choisissez le créneau qui vous convient.</p>
                     </div>
-                    -->
-
-                    <p class="form-note">Essai gratuit — 3 dossiers, sans engagement. Nous respectons votre vie privée.</p>
-                    <div class="cta-final-trust">
-                        <span>Conversion illimitée</span>
-                        <span>Sans carte bancaire</span>
-                        <span>Support en moins de 24h</span>
-                    </div>
+                    <p class="form-note">Aucun formulaire, aucun cookie, aucune donnée collectée par ce site. Votre message arrive dans une boîte e-mail, et nulle part ailleurs.</p>
                 </div>
             </div>
         </section>
@@ -2242,47 +1871,14 @@
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-left">&copy; 2026 Gizé. Tous droits réservés.</div>
+            <div class="footer-left">&copy; 2026 Gizedoc — Jean-Christophe Feydel EI. Tous droits réservés.</div>
             <div class="footer-links">
-                <a href="mailto:contact@gize.fr">contact@gize.fr</a>
+                <a href="mailto:jcfeydel@gizedoc.com">jcfeydel@gizedoc.com</a>
                 <a href="mentions-legales.html">Mentions légales</a>
                 <a href="confidentialite.html">Politique de confidentialité</a>
             </div>
         </div>
     </footer>
-
-    <!-- Video lightbox -->
-    <div class="video-lightbox" id="videoLightbox">
-        <button class="video-lightbox-close" id="videoLightboxClose" aria-label="Fermer">&times;</button>
-        <video controls preload="none" id="videoLightboxPlayer">
-            <source src="videos/07-Master.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- Exit-intent popup (lead magnet) -->
-    <div class="exit-popup-overlay" id="exitPopup">
-        <div class="exit-popup">
-            <button class="exit-popup-close" id="exitPopupClose" aria-label="Fermer">&times;</button>
-            <span class="section-label" style="margin-bottom: 12px;">Guide gratuit</span>
-            <h3>Préparez votre cabinet à la facturation électronique 2026</h3>
-            <p>Recevez notre guide pratique : calendrier, obligations, amendes, et comment Gizé vous met en conformité automatiquement.</p>
-            <form class="email-form" id="exitForm" style="justify-content: center;">
-                <input type="email" placeholder="votre@email.fr" required aria-label="Adresse email">
-                <button type="submit" class="btn-primary">Recevoir le guide</button>
-            </form>
-            <div class="form-success" id="exitSuccess">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 6L9 17l-5-5"/></svg>
-                Merci ! Vous recevrez le guide par email.
-            </div>
-            <p class="form-note" style="margin-top: 12px;">Gratuit, sans engagement. Un seul email, pas de spam.</p>
-        </div>
-    </div>
-
-    <!-- Cookie consent banner -->
-    <div id="cookieBanner" style="display:none; position:fixed; bottom:0; left:0; right:0; z-index:200; padding:16px 24px; background:var(--navy-deep); color:rgba(255,255,255,0.8); font-size:0.88rem; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap; box-shadow:0 -2px 12px rgba(0,0,0,0.15);">
-        <span>Ce site utilise des cookies strictement nécessaires au fonctionnement. Aucun cookie publicitaire. <a href="confidentialite.html" style="color:var(--emerald); text-decoration:underline;">En savoir plus</a></span>
-        <button id="cookieAccept" style="padding:8px 20px; background:var(--emerald); color:white; border:none; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; font-family:inherit; white-space:nowrap;">Compris</button>
-    </div>
 
     <script>
         /* ========== NAV SCROLL ========== */
@@ -2323,196 +1919,23 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        /* ========== COUNTER ANIMATION ========== */
-        function animateCounter(el) {
-            const target = parseInt(el.dataset.target, 10);
-            const prefix = el.dataset.prefix || '';
-            const suffix = el.dataset.suffix || '';
-            const duration = 2000;
-            const start = performance.now();
-
-            function update(now) {
-                const elapsed = now - start;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                const current = Math.round(eased * target);
-                el.textContent = prefix + current.toLocaleString('fr-FR') + suffix;
-                if (progress < 1) requestAnimationFrame(update);
-            }
-            requestAnimationFrame(update);
-        }
-
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter(entry.target);
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.roi-number').forEach(el => counterObserver.observe(el));
-
-        /* ========== VIDEO LIGHTBOX ========== */
-        (function() {
-            const lightbox = document.getElementById('videoLightbox');
-            const player = document.getElementById('videoLightboxPlayer');
-            const playerSource = player ? player.querySelector('source') : null;
-            const closeBtn = document.getElementById('videoLightboxClose');
-            if (!lightbox || !player || !playerSource) return;
-
-            function openLightbox(videoSrc) {
-                playerSource.src = videoSrc;
-                player.load();
-                lightbox.classList.add('active');
-                player.play();
-            }
-
-            function closeLightbox() {
-                lightbox.classList.remove('active');
-                player.pause();
-            }
-
-            // Hero video trigger
-            const heroTrigger = document.getElementById('heroVideoTrigger');
-            if (heroTrigger) {
-                heroTrigger.addEventListener('click', () => openLightbox('videos/07-Master.mp4'));
-            }
-
-            // Section video triggers
-            document.querySelectorAll('.section-video[data-video]').forEach(el => {
-                el.addEventListener('click', () => openLightbox(el.dataset.video));
-            });
-
-            closeBtn.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
-        })();
-
-        /* ========== ROI CALCULATOR ========== */
-        (function() {
-            const users = document.getElementById('roiUsers');
-            const clients = document.getElementById('roiClients');
-            const usersVal = document.getElementById('roiUsersVal');
-            const clientsVal = document.getElementById('roiClientsVal');
-
-            function calc() {
-                const u = parseInt(users.value);
-                const c = parseInt(clients.value);
-                usersVal.textContent = u;
-                clientsVal.textContent = c;
-
-
-                // Gain par dossier : LDM (18 min) + recherche/centralisation (8 min) + communication (4 min) = 30 min
-                const hoursSaved = Math.round(c * 30 / 60);
-                // Coût horaire moyen collaborateur (salaire + charges)
-                const gain = hoursSaved * 40;
-                // Nouveau pricing : 29€ plateforme + 12€/user, dossiers illimités
-                const costMonth = 29 + 12 * u;
-                const costYear = Math.round(costMonth * 12);
-                // ROI : nb de mois pour que les économies couvrent l'abonnement
-                const monthlyGain = gain / 12;
-                const roiMonths = monthlyGain > costMonth ? Math.max(1, Math.ceil(costMonth / (monthlyGain - costMonth) + 1)) : 99;
-                // Simplified: months until cumulative savings >= cumulative cost
-                const roiSimple = monthlyGain > 0 ? Math.max(1, Math.ceil(costMonth / monthlyGain)) : 99;
-
-                document.getElementById('roiHours').textContent = hoursSaved + 'h+';
-                document.getElementById('roiGain').textContent = gain.toLocaleString('fr-FR') + ' €';
-                document.getElementById('roiMonths').textContent = roiSimple <= 1 ? '< 1 mois' : '< ' + roiSimple + ' mois';
-                document.getElementById('roiCost').textContent =
-                    'Abonnement Gizé : ' + Math.round(costMonth) + ' € HT / mois — soit ' + costYear.toLocaleString('fr-FR') + ' € / an';
-            }
-
-            users.addEventListener('input', calc);
-            clients.addEventListener('input', calc);
-            calc();
-        })();
-
-        /* ========== EXIT-INTENT POPUP ========== */
-        (function() {
-            const popup = document.getElementById('exitPopup');
-            const closeBtn = document.getElementById('exitPopupClose');
-            if (!popup || !closeBtn) return;
-
-            function closePopup() {
-                popup.classList.remove('active');
-                localStorage.setItem('gize_exit_popup_dismissed', '1');
-            }
-
-            // Close button always works
-            closeBtn.addEventListener('click', closePopup);
-            popup.addEventListener('click', (e) => { if (e.target === popup) closePopup(); });
-
-            // Only show if not dismissed, and after 30s on page
-            if (localStorage.getItem('gize_exit_popup_dismissed')) return;
-            let canShow = false;
-            setTimeout(() => { canShow = true; }, 30000);
-
-            document.addEventListener('mouseout', (e) => {
-                if (!canShow) return;
-                if (e.clientY < 5 && e.relatedTarget == null) {
-                    canShow = false;
-                    popup.classList.add('active');
-                }
-            });
-        })();
-
         /* ========== FAQ ACCORDION ========== */
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
                 const wasOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-                if (!wasOpen) item.classList.add('open');
+                document.querySelectorAll('.faq-item.open').forEach(el => {
+                    el.classList.remove('open');
+                    const q = el.querySelector('.faq-question');
+                    if (q) q.setAttribute('aria-expanded', 'false');
+                });
+                if (!wasOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
             });
         });
 
-        /* ========== EMAIL FORMS ========== */
-        // TODO: Replace XXXXX with your Formspree form ID (create one at formspree.io)
-        const FORMSPREE_URL = 'https://formspree.io/f/XXXXX';
-
-        function handleFormSubmit(formId, successId) {
-            const form = document.getElementById(formId);
-            const success = document.getElementById(successId);
-
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const email = form.querySelector('input[type="email"]').value;
-                if (!email) return;
-
-                // Save to localStorage (backup)
-                const leads = JSON.parse(localStorage.getItem('gize_leads') || '[]');
-                leads.push({ email, date: new Date().toISOString(), source: formId });
-                localStorage.setItem('gize_leads', JSON.stringify(leads));
-
-                // Send to Formspree (email notification)
-                fetch(FORMSPREE_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify({ email, source: formId, _subject: 'Nouvelle demande de demo Gize' })
-                }).catch(() => { /* localStorage backup already saved */ });
-
-                form.style.display = 'none';
-                success.classList.add('visible');
-
-                form.closest('section').querySelector('.form-note').style.display = 'none';
-            });
-        }
-
-        handleFormSubmit('heroForm', 'heroSuccess');
-        handleFormSubmit('ctaForm', 'ctaSuccess');
-        handleFormSubmit('exitForm', 'exitSuccess');
-
-        /* ========== COOKIE CONSENT ========== */
-        (function() {
-            if (localStorage.getItem('gize_cookie_consent')) return;
-            const banner = document.getElementById('cookieBanner');
-            banner.style.display = 'flex';
-            document.getElementById('cookieAccept').addEventListener('click', () => {
-                localStorage.setItem('gize_cookie_consent', 'accepted');
-                banner.style.display = 'none';
-            });
-        })();
     </script>
 </body>
 </html>
