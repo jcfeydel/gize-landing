@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gizedoc — Production documentaire pour cabinets d'expertise comptable</title>
-    <meta name="description" content="Gizedoc importe vos modèles Word, fait saisir les données une fois par dossier, produit le PDF et la facture Factur-X, fige la version validée et scelle l'archive. Version pré-pilote.">
-    <meta name="keywords" content="lettre de mission expert comptable, production documentaire cabinet comptable, modèle Word docx, Factur-X EN 16931">
+    <meta name="description" content="Gizedoc importe vos modèles Word, fait saisir les données une fois par dossier, produit le PDF, fige la version validée et scelle l'archive. Version pré-pilote.">
+    <meta name="keywords" content="lettre de mission expert comptable, production documentaire cabinet comptable, modèle Word docx">
     <meta property="og:title" content="Gizedoc — Production documentaire pour cabinets d'expertise comptable">
-    <meta property="og:description" content="De votre modèle Word au dossier archivé : saisie unique, document validé et figé, PDF et Factur-X profil EN 16931.">
+    <meta property="og:description" content="De votre modèle Word au dossier archivé : saisie unique, document validé et figé, PDF, archive scellée.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Gizedoc">
@@ -1087,7 +1087,7 @@
                         </a>
                         <a class="contact-mail" href="mailto:jcfeydel@gizedoc.com">jcfeydel@gizedoc.com</a>
                     </div>
-                    <p class="form-note">Écrivez-nous directement : ce site n'héberge aucun formulaire et ne collecte aucune donnée.</p>
+                    <p class="form-note">Écrivez-nous directement : ce site n'héberge aucun formulaire et ne dépose aucun cookie.</p>
                     <div class="hero-badges">
                         <div class="hero-badge">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
@@ -1095,7 +1095,7 @@
                         </div>
                         <div class="hero-badge">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                            Factur-X, profil EN 16931
+                            Version validée figée et numérotée
                         </div>
                         <div class="hero-badge">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
@@ -1121,7 +1121,7 @@
                             </li>
                             <li>
                                 <span class="hero-flow-step">4</span>
-                                <div><strong>Validation, PDF, archive</strong><span class="d">La version validée est figée, la facture peut sortir en Factur-X, l'archive du dossier est scellée.</span></div>
+                                <div><strong>Validation, PDF, archive</strong><span class="d">La version validée est figée, le PDF est produit, l'archive du dossier est scellée.</span></div>
                             </li>
                         </ol>
                         <div class="hero-flow-foot">Signature électronique : fonctionnalité prévue, pas encore disponible.</div>
@@ -1223,7 +1223,7 @@
                         </div>
                         <span class="step-label">Étape 4</span>
                         <h3>Validez et archivez</h3>
-                        <p>À la validation, la version est figée et numérotée. Le PDF est produit, la facture peut sortir en Factur-X, et l'archive du dossier est scellée avec une empreinte par pièce.</p>
+                        <p>À la validation, la version est figée et numérotée. Le PDF est produit et l'archive du dossier est scellée avec une empreinte par pièce.</p>
                     </div>
                 </div>
             </div>
@@ -1263,7 +1263,7 @@
                     <div class="principle fade-in fade-in-delay-2">
                         <span class="principle-index">03</span>
                         <h3>Respect du RGPD dès la conception</h3>
-                        <p>Chaque cabinet ne voit que ses données. Les données d'un client s'exportent et s'effacent sur demande.</p>
+                        <p>Chaque cabinet ne voit que ses données. Les données d'un client s'exportent, et une demande d'effacement s'enregistre avec sa date.</p>
                     </div>
                     <div class="principle fade-in fade-in-delay-3">
                         <span class="principle-index">04</span>
@@ -1311,8 +1311,8 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
                         </div>
                         <div>
-                            <h3>Factur-X, profil EN 16931</h3>
-                            <p>La facture sort en PDF/A-3 avec le XML de facturation intégré, au profil EN 16931. Gizedoc produit le fichier ; il ne le transmet pas à votre place.</p>
+                            <h3>Facture Factur-X <span class="tag-soon">Hors pilote</span></h3>
+                            <p>Un premier moteur produit un PDF/A-3 avec le XML de facturation au profil EN 16931. Il n'est ni validé ni supporté, et reste exclu du pilote : la désignation du vendeur et de l'acheteur doit d'abord être refondue.</p>
                         </div>
                     </div>
                     <div class="feature-card fade-in">
@@ -1415,15 +1415,17 @@
                             <li>Import de modèles Word et configuration assistée des champs</li>
                             <li>Saisie par dossier, tableaux avec formules</li>
                             <li>Validation qui fige la version, historique et comparaison</li>
-                            <li>PDF, et facture Factur-X au profil EN 16931</li>
+                            <li>PDF du document validé</li>
                             <li>Clients, dossiers, droits par rôle, journal d'audit</li>
                             <li>Checklist de conformité des lettres de mission</li>
-                            <li>Archive de dossier scellée, export et effacement RGPD</li>
+                            <li>Archive de dossier scellée ; export et anonymisation des données d'un client, enregistrement d'une demande d'effacement</li>
                         </ul>
                     </div>
                     <div class="status-card fade-in fade-in-delay-1">
                         <h3>Prévu, non livré</h3>
                         <ul>
+                            <li>Facture Factur-X au profil EN 16931 : un premier moteur existe, mais il n'est ni validé ni supporté et reste exclu du pilote, en attendant la refonte vendeur/acheteur</li>
+                            <li>Exécution d'une demande d'effacement : la demande s'enregistre, son traitement reste à arrêter</li>
                             <li>Signature électronique d'un document validé</li>
                             <li>Chiffrement des données au repos</li>
                             <li>Reprise des données clients existantes</li>
@@ -1434,7 +1436,7 @@
                         <h3>Ce que Gizedoc n'est pas</h3>
                         <ul>
                             <li>Ni un logiciel de production comptable : Gizedoc s'ajoute au vôtre, il ne le remplace pas</li>
-                            <li>Ni une plateforme agréée de facturation électronique : Gizedoc produit le fichier, il ne le transmet pas</li>
+                            <li>Ni une plateforme agréée de facturation électronique : Gizedoc produira le fichier, il ne le transmettra pas</li>
                             <li>Ni un outil connecté à vos logiciels existants : aucun connecteur n'est livré à ce jour</li>
                             <li>Ni un produit avec des références clients : nous n'en avons aucune, et nous n'en inventerons pas</li>
                         </ul>
@@ -1489,8 +1491,8 @@
                             </tr>
                             <tr>
                                 <td>Facture Factur-X</td>
-                                <td>PDF/A-3 avec XML de facturation intégré, profil EN 16931.</td>
-                                <td><span class="ct-state now">Disponible</span></td>
+                                <td>PDF/A-3 avec XML de facturation intégré, profil EN 16931. Premier moteur non validé ni supporté, en attente de la refonte vendeur/acheteur.</td>
+                                <td><span class="ct-state soon">Hors pilote</span></td>
                             </tr>
                             <tr>
                                 <td>Validation d'un document</td>
@@ -1538,8 +1540,8 @@
                                 <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
-                                <td>Export et effacement RGPD</td>
-                                <td>Export des données d'un client ou d'un utilisateur, anonymisation, demande d'effacement.</td>
+                                <td>Export et anonymisation RGPD</td>
+                                <td>Export des données d'un client ou d'un utilisateur ; anonymisation d'un client sans dossier actif ; enregistrement d'une demande d'effacement, dont l'exécution reste à arrêter.</td>
                                 <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
@@ -1570,7 +1572,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="competitive-note fade-in">« Prévu » signifie : décidé, non développé, sans date annoncée. « À l'étude » signifie : pas encore décidé.</p>
+                <p class="competitive-note fade-in">« Prévu » signifie : décidé, non développé, sans date annoncée. « Hors pilote » signifie : présent dans le code, mais ni validé ni supporté. « À l'étude » signifie : pas encore décidé.</p>
             </div>
         </section>
 
@@ -1631,10 +1633,6 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                             Version figée à la validation, archive du dossier scellée
                         </div>
-                        <div class="comparison-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            Facture produite au format Factur-X, profil EN 16931
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1645,13 +1643,13 @@
             <div class="container">
                 <div class="text-center fade-in">
                     <span class="section-label">Facturation électronique</span>
-                    <h2>Vos factures, au format structuré</h2>
+                    <h2>Factur-X : un premier moteur, hors du pilote</h2>
                 </div>
                 <div class="facturx-date fade-in">EN 16931</div>
-                <p class="facturx-desc fade-in">Les données de vos documents sont déjà déclarées et typées dans Gizedoc. La facture peut donc sortir directement en Factur-X : un PDF/A-3 lisible par un humain, qui embarque le XML de facturation lisible par une machine, au profil européen EN 16931.</p>
+                <p class="facturx-desc fade-in">Les données de vos documents sont déjà déclarées et typées dans Gizedoc. Le moteur sait déjà en tirer une facture Factur-X : un PDF/A-3 lisible par un humain, qui embarque le XML de facturation lisible par une machine, au profil européen EN 16931. Ce moteur n'est ni validé ni supporté, et la facturation est exclue du pilote : la désignation du vendeur et de l'acheteur doit d'abord être refondue.</p>
                 <div class="facturx-compare fade-in">
                     <div class="facturx-card avec">
-                        <div class="price-label">Ce que Gizedoc fait</div>
+                        <div class="price-label">Ce que le moteur fait, une fois validé</div>
                         <ul class="facturx-list">
                             <li>Produit le PDF/A-3 avec le XML de facturation intégré</li>
                             <li>Applique le profil EN 16931, et non un profil réduit</li>
@@ -1714,7 +1712,7 @@
                 <div class="security-badges fade-in">
                     <div class="security-badge">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                        Export et effacement des données d'un client
+                        Export et anonymisation des données d'un client
                     </div>
                     <div class="security-badge">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
@@ -1822,14 +1820,14 @@
                             Gizedoc remplace-t-il mon logiciel de production comptable ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Non. Gizedoc s'occupe du cycle de vie de vos documents : modèles, saisie, validation, facture au format structuré, archivage. Il ne tient pas votre comptabilité. Aucun connecteur automatique avec un logiciel de production n'est livré aujourd'hui ; la reprise de données existantes est à l'étude.</p></div>
+                        <div class="faq-answer"><p>Non. Gizedoc s'occupe du cycle de vie de vos documents : modèles, saisie, validation, archivage ; la facture au format structuré est en préparation. Il ne tient pas votre comptabilité. Aucun connecteur automatique avec un logiciel de production n'est livré aujourd'hui ; la reprise de données existantes est à l'étude.</p></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
                             Que vaut exactement la conformité Factur-X ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Gizedoc produit une facture au format Factur-X, profil EN 16931 : un PDF/A-3 qui embarque le XML de facturation. Ce que Gizedoc ne fait pas : transmettre la facture. Il n'est ni plateforme agréée, ni opérateur de transmission, et ne se substitue à aucune de vos obligations déclaratives.</p></div>
+                        <div class="faq-answer"><p>Le moteur de Gizedoc produit une facture au format Factur-X, profil EN 16931 : un PDF/A-3 qui embarque le XML de facturation. Ce moteur n'est ni validé ni supporté : sa désignation du vendeur et de l'acheteur doit d'abord être refondue, et la facturation est exclue du pilote. Ce que Gizedoc ne fera pas : transmettre la facture. Il n'est ni plateforme agréée, ni opérateur de transmission, et ne se substitue à aucune de vos obligations déclaratives.</p></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
@@ -1843,7 +1841,7 @@
                             Que se passe-t-il pour mes données si nous arrêtons ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>L'export des données d'un client ou d'un utilisateur, leur anonymisation et l'enregistrement d'une demande d'effacement sont disponibles dans le produit. Les délais de conservation et de suppression applicables au pilote sont fixés par écrit dans le contrat, plutôt qu'annoncés ici.</p></div>
+                        <div class="faq-answer"><p>L'export des données d'un client ou d'un utilisateur, l'anonymisation d'un client sans dossier actif et l'enregistrement d'une demande d'effacement sont disponibles dans le produit ; l'exécution d'une demande d'effacement reste à arrêter. Les délais de conservation et de suppression applicables au pilote sont fixés par écrit dans le contrat, plutôt qu'annoncés ici.</p></div>
                     </div>
                 </div>
             </div>
@@ -1862,7 +1860,7 @@
                             Écrire à jcfeydel@gizedoc.com
                         </a>
                     </div>
-                    <p class="form-note">Aucun formulaire, aucun cookie, aucune donnée collectée par ce site. Votre message arrive dans une boîte e-mail, et nulle part ailleurs.</p>
+                    <p class="form-note">Aucun formulaire, aucun cookie, aucune mesure d'audience. Votre message arrive dans la messagerie de l'éditeur, opérée par Google Workspace : voir la politique de confidentialité.</p>
                 </div>
             </div>
         </section>
