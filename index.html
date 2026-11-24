@@ -156,8 +156,10 @@
             z-index: 98;
             opacity: 0;
             transition: opacity 0.3s;
+            /* Affiché sous 768 px même menu fermé, pour son fondu : il ne doit alors capter aucun toucher. */
+            pointer-events: none;
         }
-        .nav-mobile-overlay.active { opacity: 1; }
+        .nav-mobile-overlay.active { opacity: 1; pointer-events: auto; }
         .nav-mobile {
             display: none;
             position: fixed;
