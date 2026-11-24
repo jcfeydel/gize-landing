@@ -1371,15 +1371,6 @@
                     </div>
                     <div class="feature-card fade-in">
                         <div class="feature-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-                        </div>
-                        <div>
-                            <h3>Checklist de conformité des lettres de mission</h3>
-                            <p>Un jeu de règles vérifie les mentions attendues d'une lettre de mission et signale ce qui manque. Ces règles sont déterministes : elles n'utilisent pas d'IA.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                         </div>
                         <div>
@@ -1417,7 +1408,6 @@
                             <li>Validation qui fige la version, historique et comparaison</li>
                             <li>PDF du document validé</li>
                             <li>Clients, dossiers, droits par rôle, journal d'audit</li>
-                            <li>Checklist de conformité des lettres de mission</li>
                             <li>Archive de dossier scellée ; export et anonymisation des données d'un client, enregistrement d'une demande d'effacement</li>
                         </ul>
                     </div>
@@ -1429,7 +1419,6 @@
                             <li>Signature électronique d'un document validé</li>
                             <li>Chiffrement des données au repos</li>
                             <li>Reprise des données clients existantes</li>
-                            <li>Analyse de conformité assistée par IA : le code existe, mais l'option reste désactivée tant qu'un fournisseur européen n'est pas configuré</li>
                         </ul>
                     </div>
                     <div class="status-card fade-in fade-in-delay-2">
@@ -1530,11 +1519,6 @@
                                 <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
-                                <td>Conformité des lettres de mission</td>
-                                <td>Jeu de règles déterministes qui signale les mentions manquantes.</td>
-                                <td><span class="ct-state now">Disponible</span></td>
-                            </tr>
-                            <tr>
                                 <td>Recherche d'entreprise</td>
                                 <td>Pré-remplissage depuis l'API publique recherche-entreprises (Sirene, RNE).</td>
                                 <td><span class="ct-state now">Disponible</span></td>
@@ -1543,11 +1527,6 @@
                                 <td>Export et anonymisation RGPD</td>
                                 <td>Export des données d'un client ou d'un utilisateur ; anonymisation d'un client sans dossier actif ; enregistrement d'une demande d'effacement, dont l'exécution reste à arrêter.</td>
                                 <td><span class="ct-state now">Disponible</span></td>
-                            </tr>
-                            <tr>
-                                <td>Analyse de conformité par IA</td>
-                                <td>Désactivée par défaut ; activable si un fournisseur européen est configuré sur l'instance.</td>
-                                <td><span class="ct-state study">Option</span></td>
                             </tr>
                             <tr>
                                 <td>Signature électronique</td>
@@ -1806,7 +1785,7 @@
                             Mes documents sont-ils envoyés à un service d'intelligence artificielle ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Pour la configuration assistée, le contenu du modèle est envoyé au fournisseur d'IA configuré pour l'instance. Le fournisseur, son pays d'hébergement et le périmètre exact des données envoyées font partie des points arrêtés par écrit avant tout pilote. L'analyse de conformité assistée par IA, elle, est désactivée par défaut. La checklist de conformité des lettres de mission n'utilise aucune IA : ce sont des règles écrites.</p></div>
+                        <div class="faq-answer"><p>Pour la configuration assistée, le contenu du modèle est envoyé au fournisseur d'IA configuré pour l'instance. Le fournisseur, son pays d'hébergement et le périmètre exact des données envoyées font partie des points arrêtés par écrit avant tout pilote.</p></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
