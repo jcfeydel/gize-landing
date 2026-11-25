@@ -1060,13 +1060,13 @@
                 <a href="#securite">Sécurité</a>
                 <a href="#contact" class="nav-cta">Nous écrire</a>
             </div>
-            <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
     <div class="nav-mobile-overlay" id="mobileOverlay"></div>
-    <nav class="nav-mobile" id="mobileNav">
+    <nav class="nav-mobile" id="mobileNav" inert>
         <a href="#fonctionnalites" class="mobile-link">Fonctionnalités</a>
         <a href="#capacites" class="mobile-link">Capacités</a>
         <a href="#tarifs" class="mobile-link">Tarifs</a>
@@ -1126,7 +1126,7 @@
                                 <div><strong>Validation, PDF, archive</strong><span class="d">La version validée est figée, le PDF est produit, l'archive du dossier est scellée.</span></div>
                             </li>
                         </ol>
-                        <div class="hero-flow-foot">Signature électronique : fonctionnalité prévue, pas encore disponible.</div>
+                        <div class="hero-flow-foot">Signature électronique : développée, pas encore ouverte.</div>
                     </div>
                 </div>
             </div>
@@ -1385,8 +1385,8 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
                         </div>
                         <div>
-                            <h3>Signature électronique <span class="tag-soon">Prévu</span></h3>
-                            <p>Envoyer un document validé à la signature est une fonctionnalité prévue. Elle n'est pas disponible aujourd'hui et n'est promise à aucune date.</p>
+                            <h3>Signature électronique <span class="tag-soon">Pas encore ouvert</span></h3>
+                            <p>L'envoi d'un document validé à la signature est développé, mais pas encore ouvert : il n'est pas disponible aujourd'hui et n'est promis à aucune date.</p>
                         </div>
                     </div>
                 </div>
@@ -1410,6 +1410,7 @@
                             <li>Validation qui fige la version, historique et comparaison</li>
                             <li>PDF du document validé</li>
                             <li>Clients, dossiers, droits par rôle, journal d'audit</li>
+                            <li>Import des clients et des dossiers par fichier CSV ou Excel</li>
                             <li>Archive de dossier scellée ; export et anonymisation des données d'un client, enregistrement d'une demande d'effacement</li>
                         </ul>
                     </div>
@@ -1418,9 +1419,8 @@
                         <ul>
                             <li>Facture Factur-X au profil EN 16931 : un premier moteur existe, mais il n'est ni validé ni supporté et reste exclu du pilote, en attendant la refonte vendeur/acheteur</li>
                             <li>Exécution d'une demande d'effacement : la demande s'enregistre, son traitement reste à arrêter</li>
-                            <li>Signature électronique d'un document validé</li>
+                            <li>Signature électronique d'un document validé : développée, pas encore ouverte</li>
                             <li>Chiffrement des données au repos</li>
-                            <li>Reprise des données clients existantes</li>
                         </ul>
                     </div>
                     <div class="status-card fade-in fade-in-delay-2">
@@ -1532,8 +1532,8 @@
                             </tr>
                             <tr>
                                 <td>Signature électronique</td>
-                                <td>Envoi d'un document validé à la signature.</td>
-                                <td><span class="ct-state soon">Prévu</span></td>
+                                <td>Envoi d'un document validé à la signature ; développé, pas encore ouvert.</td>
+                                <td><span class="ct-state soon">Pas encore ouvert</span></td>
                             </tr>
                             <tr>
                                 <td>Chiffrement au repos</td>
@@ -1542,8 +1542,8 @@
                             </tr>
                             <tr>
                                 <td>Reprise des données clients</td>
-                                <td>Import de vos clients existants par fichier ou par interface.</td>
-                                <td><span class="ct-state study">À l'étude</span></td>
+                                <td>Import de vos clients et de vos dossiers par fichier CSV ou Excel, avec une simulation avant l'écriture ; à éprouver sur l'export de votre logiciel pendant le pilote.</td>
+                                <td><span class="ct-state now">Disponible</span></td>
                             </tr>
                             <tr>
                                 <td>Connecteurs logiciels</td>
@@ -1553,7 +1553,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="competitive-note fade-in">« Prévu » signifie : décidé, non développé, sans date annoncée. « Hors pilote » signifie : présent dans le code, mais ni validé ni supporté. « À l'étude » signifie : pas encore décidé.</p>
+                <p class="competitive-note fade-in">« Prévu » signifie : décidé, non développé, sans date annoncée. « Pas encore ouvert » signifie : développé, fermé en production, sans date annoncée. « Hors pilote » signifie : présent dans le code, mais ni validé ni supporté. « À l'étude » signifie : pas encore décidé.</p>
             </div>
         </section>
 
@@ -1801,7 +1801,7 @@
                             Gizedoc remplace-t-il mon logiciel de production comptable ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Non. Gizedoc s'occupe du cycle de vie de vos documents : modèles, saisie, validation, archivage ; la facture au format structuré est en préparation. Il ne tient pas votre comptabilité. Aucun connecteur automatique avec un logiciel de production n'est livré aujourd'hui ; la reprise de données existantes est à l'étude.</p></div>
+                        <div class="faq-answer"><p>Non. Gizedoc s'occupe du cycle de vie de vos documents : modèles, saisie, validation, archivage ; la facture au format structuré est en préparation. Il ne tient pas votre comptabilité. Aucun connecteur automatique avec un logiciel de production n'est livré aujourd'hui ; vos clients et vos dossiers existants se reprennent par un import de fichier CSV ou Excel, à éprouver sur l'export de votre logiciel.</p></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
@@ -1815,7 +1815,7 @@
                             Puis-je signer électroniquement un document depuis Gizedoc ?
                             <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </button>
-                        <div class="faq-answer"><p>Pas aujourd'hui. La signature électronique est une fonctionnalité prévue, elle n'est pas développée et nous n'annonçons ni date, ni prestataire. Tant qu'elle n'existe pas, un document validé s'imprime ou se transmet comme vous le faites actuellement.</p></div>
+                        <div class="faq-answer"><p>Pas aujourd'hui. La signature électronique est développée, mais elle n'est pas encore ouverte : nous n'annonçons ni date, ni prestataire. Tant qu'elle n'est pas ouverte, un document validé s'imprime ou se transmet comme vous le faites actuellement.</p></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question" aria-expanded="false">
@@ -1872,10 +1872,13 @@
         const mobileNav = document.getElementById('mobileNav');
         const mobileOverlay = document.getElementById('mobileOverlay');
 
+        // Menu fermé, ses liens sont inertes : hors de la tabulation et des lecteurs d'écran.
         function toggleMobileNav() {
-            mobileNav.classList.toggle('active');
-            mobileOverlay.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            const ouvert = mobileNav.classList.toggle('active');
+            mobileOverlay.classList.toggle('active', ouvert);
+            mobileNav.inert = !ouvert;
+            hamburger.setAttribute('aria-expanded', String(ouvert));
+            document.body.style.overflow = ouvert ? 'hidden' : '';
         }
 
         hamburger.addEventListener('click', toggleMobileNav);
@@ -1884,6 +1887,11 @@
             link.addEventListener('click', () => {
                 if (mobileNav.classList.contains('active')) toggleMobileNav();
             });
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key !== 'Escape' || !mobileNav.classList.contains('active')) return;
+            if (mobileNav.contains(document.activeElement)) hamburger.focus();
+            toggleMobileNav();
         });
 
         /* ========== FADE-IN ON SCROLL ========== */
